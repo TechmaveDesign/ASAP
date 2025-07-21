@@ -1,7 +1,6 @@
 <?php include("header.php") ?>
 
-<!-- Main Content -->
-<div class="hk-pg-wrapper">
+
 	<div class="container-xxl">
 
 		<!-- Page Body -->
@@ -46,12 +45,12 @@
 								<div class="card-action-wrap">
 									<div class="btn-group d-lg-flex d-none" role="group"
 										aria-label="Basic outlined example" id="dailyAppFilters">
-										<!-- <button type="button" class="btn btn-outline-light active"
-											data-daily-range="week">Weekly</button> -->
+										<button type="button" class="btn btn-outline-light active"
+											data-daily-range="week">Weekly</button>
 										<button type="button" class="btn btn-outline-light"
 											data-daily-range="month">Monthly</button>
-										<!-- <button type="button" class="btn btn-outline-light"
-											data-daily-range="year">Yearly</button> -->
+										<button type="button" class="btn btn-outline-light"
+											data-daily-range="year">Yearly</button>
 									</div>
 								</div>
 
@@ -593,20 +592,7 @@
 		<!-- /Page Body -->
 	</div>
 
-	<!-- Page Footer -->
-	<div class="hk-footer">
-		<footer class="container-xxl footer">
-			<div class="row">
-				<div class="col-xl-12">
-					<p class="footer-text"><span class="copy-text">ASAP © 2025 All rights reserved.</span></p>
-				</div>
-				
-			</div>
-		</footer>
-	</div>
-	<!-- / Page Footer -->
 
-</div>
 <!-- /Main Content -->
 
 <?php include("footer.php") ?>

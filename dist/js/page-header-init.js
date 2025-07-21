@@ -3,13 +3,13 @@ const pageConfig = {
     title: "Dashboard Overview",
     breadcrumbs: ["Home", "Dashboard"]
   },
-  "index2.php": {
-    title: "Borrower Management",
-    breadcrumbs: ["User Management", "Borrower Management"]
+  "customer-new.php": {
+    title: "All New Customers",
+    breadcrumbs: ["Dashboard", "All New Customers"]
   },
-  "loan-reports.html": {
-    title: "Loan Reports",
-    breadcrumbs: ["Reports & Analytics", "Loan Reports"]
+  "customer-view.php": {
+    title: "Customer Details",
+    breadcrumbs: ["New Customer","Customer Details"]
   },
   "collection-reports.html": {
     title: "Collection Reports",

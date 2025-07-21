@@ -62747,7 +62747,7 @@ label {
   border-top-left-radius: 0.5rem;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #87C443;
+    background-color: #b8fa6f;
 }
 .select2-container--default .select2-results__option[aria-selected=true] {
   background-color: #f7f7f7;
@@ -65245,7 +65245,12 @@ span[data-notify=icon] {
 .daterangepicker .drp-calendar.single .calendar-time {
   padding-right: 8px;
 }
-
+.daterangepicker .drp-calendar {
+      max-width: 388px !important;
+}
+.daterangepicker .calendar-table th{
+    background: transparent !important;
+}
 @media (max-width: 767px) {
   .daterangepicker {
     width: 281px;
@@ -67517,8 +67522,8 @@ div.hopscotch-bubble .hopscotch-bubble-container .hopscotch-actions .hopscotch-n
   border-color: #eef6ff;
 }
 .badge.badge-soft-primary {
-  background: #ebf5f5;
-  color: #87C443;
+    background: #e9f8ff;
+    color: #03A9F4;
 }
 .badge.badge-soft-primary.badge-indicator-processing:after {
   border-color: #ebf5f5;
@@ -70122,12 +70127,13 @@ Project:	Jampack
   padding-bottom: 120px;
 }
 [data-footer=simple] .hk-footer, .footer-simple-example .hk-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-top: 1px solid #eaeaea;
-  background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #efefef;
+    background: #fff;
+    z-index: 99;
 }
 [data-footer=simple] .hk-footer .footer > .row, .footer-simple-example .hk-footer .footer > .row {
   height: 60px;
@@ -76047,8 +76053,8 @@ Project:	Jampack
 
 /*Contact */
 .contactapp-wrap {
-  position: relative;
-  height: calc(100vh - 65px);
+    position: relative;
+    height: 100%;
 }
 .contactapp-wrap .contactapp-sidebar {
   position: absolute;

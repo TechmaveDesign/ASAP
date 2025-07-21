@@ -27,6 +27,11 @@
     <link href="vendors/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
         type="text/css" />
 
+     <!-- Datetimepicker CSS -->
+    <!-- <link rel="stylesheet" href="dist/customplugins/date-time-range/bootstrap-datetimepicker.min.css"> -->
+
+    <!-- Daterangepikcer CSS -->
+    <!-- <link rel="stylesheet" href="dist/customplugins/date-time-range/daterangepicker.css"> -->
     <!-- CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="dist/css/custom.css">
@@ -296,6 +301,7 @@
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
                                             <img src="dist/img/newimages/icons/dashboard.png" alt="">
+                                             <!-- <iconify-icon icon="mynaui:home"></iconify-icon> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Dashboard</span>
@@ -309,7 +315,31 @@
                             <span>User Management</span>
                         </div>
                         <ul class="navbar-nav flex-column">
+                          <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
+                                    data-bs-target="#dash_scrumboardd">
+                                    <span class="nav-icon-wrap position-relative">
 
+                                        <span class="svg-icon">
+                                             <img src="dist/img/newimages/icons/riskrules.png" alt="">
+                                             <!-- <iconify-icon icon="famicons:shield-outline"></iconify-icon> -->
+                                        </span>
+                                    </span>
+                                    <span class="nav-link-text">User Permission </span>
+                                </a>
+                                <ul id="dash_scrumboardd" class="nav flex-column collapse  nav-children">
+                                    <li class="nav-item">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><span class="nav-link-text">User's</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><span class="nav-link-text">Roles</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
                                     data-bs-target="#dash_scrumboard">
@@ -317,6 +347,7 @@
 
                                         <span class="svg-icon">
                                             <img src="dist/img/newimages/icons/profile.png" alt="">
+                                             <!-- <iconify-icon icon="iconoir:user"></iconify-icon> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Customers Management </span>
@@ -325,17 +356,17 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">New
+                                                <a class="nav-link" href="customer-new.php"><span class="nav-link-text">New
                                                         Customers</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">All
+                                                <a class="nav-link" href="customer-all.php"><span class="nav-link-text">All
                                                         Customers</span></a>
                                             </li>
-                                            <li class="nav-item">
+                                            <!-- <li class="nav-item">
                                                 <a class="nav-link" href="##"><span class="nav-link-text">Auto Rejected
                                                         Customers</span></a>
-                                            </li>
+                                            </li> -->
 
                                         </ul>
                                     </li>
@@ -677,3 +708,6 @@
         </div>
         <div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
         <!-- /Vertical Nav -->
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">
