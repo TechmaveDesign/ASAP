@@ -1543,6 +1543,18 @@ background: rgba(218, 253, 177, 0.56);
     font-size: 18px;
     color: #3dd750;
 }
+ .CustomerApprovalTab .rejectStep .step-title iconify-icon {
+    font-size: 18px;
+    color: #F44336;
+}
+.CustomerApprovalTab .tab.rejectStep.active {
+    /* background-color: #f1f5ff; */
+    border-bottom: 2px solid #f44336;
+    color: #F44336;
+    /* background: #edfadd !important; */
+    /* border: 1px solid #90dc39; */
+    border-radius: 0;
+}
 iconify-icon.angleRight {
     background: #f7f7f7;
     color: #9c9c9c !important;
@@ -1609,7 +1621,44 @@ iconify-icon.angleRight {
     border-radius: 5px;
     border: 1px solid #c8ffca;
 }
+.status-danger {
+    padding: 2px 10px;
+    background: #fffaf9;
+    color: #F44336;
+    border-radius: 5px;
+    border: 1px solid #F44336;
+}
+.rejection-alert {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fdecea;
+  border: 1px solid #f5c2c0;
+  border-radius: 8px;
+  padding: 16px;
+  color: #5f2120;
+  max-width: 100%;
+  margin: 16px 0;
+}
 
+.rejection-alert .icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.rejection-alert .text {
+  font-size: 14px;
+}
+
+.rejection-alert strong {
+  display: block;
+  font-weight: 600;
+  color: #b10000;
+  margin-bottom: 6px;
+}
+.customerID {
+    font-size: 12px;
+    color: #2196F3;
+}
 /*Info Banner css */
 .info-banner {
     display: flex;
@@ -1810,9 +1859,10 @@ background: var(--light-bg-gray);
     position: relative;
     font-size: 14px;
 }
-	.CustomCard {
+.CustomCard {
     border: 1px solid var(--tab-border);
     border-radius: 20px;
+    background: #fff;
 }
 .CustomCardBody {
     padding: 15px;
@@ -2886,6 +2936,206 @@ background: #4CAF50;
 }
 
 /* logo icon upload style end */
+.StepActions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.stepActionBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #3b82f6;
+}
+.stepActionBtn.rejectBtn{
+  color: #c32f26;
+}
+.FileStatus {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.CreditApproveBTn {
+    font-size: 13px;
+    color: var(--color-white);
+    border: 1px solid var(--theme-bg-primary);
+    padding: 2px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--theme-bg-primary);
+}
+.CreditApproveBTn:hover{
+   background: var(--theme-bg-secondary);
+    color: var(--color-white);
+      border: 1px solid var(--theme-bg-secondary);
+}
+.markAsApprovedBtn {
+    color: #ffffff;
+    border: 1px solid #42cd00;
+    background: #42cd00;
+    padding: 4px 7px;
+}
+.markAsApprovedBtn:hover,.markAsApprovedBtn:focus,.markAsApprovedBtn:active{
+  color: #ffffff;
+    border: 1px solid #42cd00;
+    background: #42cd00;
+}
+
+
+.AssessmentBTn {
+    font-size: 13px;
+    color: var(--color-white);
+    border: 1px solid var(--theme-bg-secondary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--theme-bg-secondary);
+}
+.AssessmentBTn:hover, .AssessmentBTn:focus,.AssessmentBTn:active{
+   background: var(--theme-bg-primary);
+    color: var(--color-white);
+      border: 1px solid var(--theme-bg-primary);
+}
+.AssessmentBTn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+  display: none;
+}
+/* .markAsApprovedBtn .form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+    accent-color: black;
+    padding: 0;
+} */
+/* Hide default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+label.custom-checkbox {
+    line-height: 0;
+}
+/* Style the custom checkmark box */
+.custom-checkbox .checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+}
+
+/* Draw the black checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #4caf50;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.badge.badge-soft-warning {
+    background: #fffaeb;
+    color: #cc9d00;
+    border: 1px solid #ffe8c6;
+}
+.badge.badge-soft-success {
+    background: #ebfcf5;
+    color: #00ab66;
+    border: 1px solid #bfffc2;
+}
+.badge.badge-soft-primary {
+    background: #e9f8ff;
+    color: #03A9F4;
+    border: 1px solid #c6e6ff;
+}
+.CreditApproveBTn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor:not-allowed;
+}
+section.CustomerInformation:nth-child(even) {
+    background: #fbfbfb !important;
+}
+section.CustomerInformation {
+    padding: 30px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.CustomerApprovalTab.DisburesmentTab .tab.active {
+    /* background-color: #f1f5ff; */
+    border-bottom: none;
+    color: #000000;
+    /* background: #edfadd !important; */
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background: #fff;
+        border: 1px solid #d8d6d6;
+    box-shadow: rgb(149 157 165 / 9%) 0px 8px 24px;
+}
+.CustomerApprovalTab.DisburesmentTab .tab {
+    padding: 10px 15px;
+    /* border-right: 1px solid var(--tab-border); */
+    cursor: pointer;
+    font-size: 13px;
+    position: relative;
+    /* flex: 1 0 auto; */
+    /* height: 70px; */
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    align-items: center;
+    border: 1px solid transparent;
+    margin-right: 0px;
+}
+.CustomerApprovalTab.DisburesmentTab  .tab::before {
+   display: none;
+}
+.CustomerApprovalTab.DisburesmentTab .tab-header {
+    display: flex;
+    overflow-x: auto;
+    border-top: 1px solid var(--tab-border);
+    border-bottom: 1px solid var(--tab-border);
+    border-radius: 0;
+    /* background: #f9f9f9; */
+    align-items: center;
+    padding: 10px 20px;
+}
+.ScheduleDisbuBtn ,.ScheduleDisbuBtn:hover{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    background: #87c340;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+}
  /**************************************************
     Customer Detail Page Css Start Here
   ******************************************************/

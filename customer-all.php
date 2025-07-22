@@ -141,7 +141,7 @@
 									<table class="table common-datatable nowrap w-100">
 										<thead>
 											<tr>
-
+                                                <th>Customer ID</th>
 												<th>Name</th>
 												<th>Email Address</th>
 												<th>Phone</th>
@@ -151,107 +151,102 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="customer-view.php" class="customerID">ASAP202500001</a>
+                                                </td>
                                                 <td>
                                                     <div class="media align-items-center">
                                                         <div class="media-head me-2">
                                                             <div class="avatar avatar-xs avatar-rounded">
-                                                                <img src="dist/img/avatar1.jpg" alt="user" class="avatar-img">
+                                                                <img src="dist/img/newimages/indian-users/user-in1.png" alt="user" class="avatar-img">
                                                             </div>
                                                         </div>
                                                         <div class="media-body">
-                                                            <span class="d-block text-high-em">Morgan Freeman</span>
+                                                            <span class="d-block text-high-em">Amit Sharma</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-truncate">morgan@ASAP.com</td>
-                                                <td>+145 52 5689</td>
+                                                <td class="text-truncate">amit.sharma@asap.in</td>
+                                                <td>98765 43210</td>
                                                 <td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
-                                                <td>2025-07-09 06:30 PM</td>
+                                                <td>20/07/2025 10:15 AM</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div class="d-flex">
-                                                            <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-                                                                data-bs-toggle="tooltip" data-placement="top"
-                                                                data-bs-original-title="View Customer Details"
-                                                                href="customer-view.php">
-                                                                <span class="icon">
-                                                                    <iconify-icon icon="proicons:eye"></iconify-icon>
-                                                                </span>
-                                                            </a>
-                                                        </div>
+                                                        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+                                                            data-bs-toggle="tooltip" title="View Customer Details"
+                                                            href="customer-view.php">
+                                                            <span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
+                                                <td>
+                                                    <a href="customer-view.php" class="customerID">ASAP202500002</a>
+                                                </td>
                                                 <td>
                                                     <div class="media align-items-center">
                                                         <div class="media-head me-2">
                                                             <div class="avatar avatar-xs avatar-rounded">
-                                                                <img src="dist/img/avatar9.jpg" alt="user" class="avatar-img">
+                                                                <img src="dist/img/newimages/indian-users/user-in2.png" alt="user" class="avatar-img">
                                                             </div>
                                                         </div>
                                                         <div class="media-body">
-                                                            <span class="d-block text-high-em">Huma Therman</span>
+                                                            <span class="d-block text-high-em">Vijay Desai</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-truncate">huma@clariesup.au</td>
-                                                <td>+234 48 2365</td>
-                                                <td><span class="badge badge-soft-warning my-1 me-2">Pending</span></td>
-                                                <td>2025-07-09 06:30 PM</td>
+                                                <td class="text-truncate">vijay.desai@clariesup.in</td>
+                                                <td>98230 11456</td>
+                                                <td><span class="badge badge-soft-warning my-1 me-2">In Progress</span></td>
+                                                <td>20/07/2025 11:25 AM</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div class="d-flex">
-                                                            <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-                                                                data-bs-toggle="tooltip" data-placement="top"
-                                                                data-bs-original-title="View Customer Details"
-                                                                href="customer-view.php">
-                                                                <span class="icon">
-                                                                    <iconify-icon icon="proicons:eye"></iconify-icon>
-                                                                </span>
-                                                            </a>
-                                                        </div>
+                                                        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+                                                            data-bs-toggle="tooltip" title="View Customer Details"
+                                                            href="customer-view.php">
+                                                            <span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
+                                                <td>
+                                                    <a href="customer-view.php" class="customerID">ASAP202500003</a>
+                                                </td>
                                                 <td>
                                                     <div class="media align-items-center">
                                                         <div class="media-head me-2">
                                                             <div class="avatar avatar-xs avatar-soft-info avatar-rounded">
-                                                                <span class="initial-wrap">C</span>
+                                                                <img src="dist/img/newimages/indian-users/user-in3.png" alt="user" class="avatar-img">
                                                             </div>
                                                         </div>
                                                         <div class="media-body">
-                                                            <span class="d-block text-high-em">Charlie Chaplin</span>
+                                                            <span class="d-block text-high-em">Rahul Mehta</span>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-truncate">charlie@leernoca.monster</td>
-                                                <td>+741 56 7896</td>
-                                                <td><span class="badge badge-soft-primary my-1 me-2">In Progress</span></td>
-                                                <td>2025-07-09 06:30 PM</td>
+                                                <td class="text-truncate">rahul.mehta@leernoca.in</td>
+                                                <td>99001 77665</td>
+                                                <td><span class="badge badge-soft-primary my-1 me-2">Pending</span></td>
+                                                <td>19/07/2025 04:45 PM</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div class="d-flex">
-                                                            <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-                                                                data-bs-toggle="tooltip" data-placement="top"
-                                                                data-bs-original-title="View Customer Details"
-                                                                href="customer-view.php">
-                                                                <span class="icon">
-                                                                    <iconify-icon icon="proicons:eye"></iconify-icon>
-                                                                </span>
-                                                            </a>
-                                                        </div>
+                                                        <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+                                                            data-bs-toggle="tooltip" title="View Customer Details"
+                                                            href="customer-view.php">
+                                                            <span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
 
+                                            <!-- Repeat for others using different statuses as needed -->
+                                        </tbody>
 
-										</tbody>
 									</table>
 								</div>
 

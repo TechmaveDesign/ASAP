@@ -74,9 +74,9 @@
                                     <div class="banner-content">
                                     <div class="banner-title">Atul Sharma has some unverified information</div>
                                     <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 15%;"></div>
+                                        <div class="progress-fill" style="width: 50%;"></div>
                                     </div>
-                                    <div class="progress-percent">15% completed</div>
+                                    <div class="progress-percent">50% completed</div>
                                     </div>
                                 </div>
 
@@ -102,7 +102,7 @@
                                         </div>
                                         <div class="FileStatus">
                                             <div class="StatusBox">
-                                                <span class="badge badge-soft-warning">In Progress</span>
+                                                <span class="badge badge-soft-danger">Rejected</span>
                                             </div>
                                         <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
                                                 <label class="custom-checkbox mb-0">
@@ -152,12 +152,12 @@
                                     </div>
                                     <div class="tab" data-tab="panel3">
                                     
-                                    <div class="step-title"> Guarantor/Co-Applicant Details</div>
+                                    <div class="step-title"><iconify-icon icon="ph:seal-check-fill"></iconify-icon> Guarantor/Co-Applicant Details</div>
                                    
                                     </div>
-                                    <div class="tab" data-tab="panel4">
+                                    <div class="tab rejectStep" data-tab="panel4">
                                   
-                                    <div class="step-title"> Business Details</div>
+                                    <div class="step-title "><iconify-icon icon="mage:shield-cross"></iconify-icon> Business Details</div>
                                    
                                     
                                     </div>
@@ -351,7 +351,9 @@
                                     <div class="tab-panel" id="panel2">
                                        <div class="TabInnerHead">
                                             <div class="HeadCnt">
-                                               <h6>KYC Document Review</h6>
+                                               <h6>KYC Document Review
+                                                <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div>
+                                               </h6>
                                             <p>Verify the customer's identity by reviewing the submitted KYC documents, such as Aadhaar, PAN, and proof of address.</p>
                                             </div>
                                               <div class="StepActions">
@@ -661,7 +663,7 @@
                                     <div class="tab-panel" id="panel3">
                                        <div class="TabInnerHead">
                                             <div class="HeadCnt">
-                                                <h6> Guarantor/Co-Applicant Details</h6>
+                                                <h6> Guarantor/Co-Applicant Details <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div></h6>
                                                 <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p>
                                             </div>
                                              <div class="StepActions">
@@ -821,7 +823,9 @@
                                     <div class="tab-panel" id="panel4">
                                         <div class="TabInnerHead">
                                                 <div class="HeadCnt">
-                                                    <h6>Business Details</h6>
+                                                    <h6>Business Details
+                                                        <div class="subtext"> <div class="status-danger">Rejected</div> 16 July,2025</div>
+                                                    </h6>
                                                     <p>Review the customer’s business information including type, ownership, income, and registration details before proceeding.</p>
                                                 </div>
                                                 <div class="StepActions">
@@ -970,6 +974,18 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="rejection-alert">
+                                                        <div class="icon">
+                                                            <iconify-icon icon="mdi:close-circle-outline" style="color: #d93025;" width="28"></iconify-icon>
+                                                        </div>
+                                                        <div class="text">
+                                                            <strong>Business Details Rejected</strong>
+                                                            <p>
+                                                            The business address proof provided does not match official records. Please upload a valid and recent document such as GST certificate, utility bill, or registration license with correct business name and address.
+                                                            </p>
+                                                        </div>
+                                                        </div>
+
                                                 </div>
                                                 </div>
                                                

@@ -102,6 +102,19 @@
 
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-3 col-sm-6 col-12">
+                                                            <div class="input-blocks">
+                                                              
+                                                                <iconify-icon icon="oui:app-users-roles"  class="info-img"></iconify-icon>
+                                                                <select class="select2">
+                                                                    <option disabled selected>Select Status</option>
+                                                                    <option>Approved</option>
+                                                                    <option>Sent to Credit</option>
+                                                                    <!-- <option>In Progress</option> -->
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
                                                         <!-- <div class="col-lg-3 col-sm-6 col-12">
                                                             <div class="input-blocks">
                                                               
@@ -144,7 +157,7 @@
 									<table class="table common-datatable nowrap w-100">
 										<thead>
 											<tr>
-												<th>Customer Id</th>
+                                                <th>Customer Id</th>
 												<th>Name</th>
 												<th>Email Address</th>
 												<th>Phone</th>
@@ -155,8 +168,8 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td>
-                                                    <a href="customer-view.php" class="customerID">ASAP202500001</a>
+                                                <td>
+                                                    <a href="customer-approved-view.php" class="customerID">ASAP202500001</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -172,13 +185,14 @@
 												</td>
 												<td class="text-truncate">amit.sharma@asap.in</td>
 												<td>98765 43210</td>
-												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td><span class="badge badge-soft-success my-1 me-2">Approved</span></td>
+
 												<td>20/07/2025 10:15 AM</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="customer-view.php">
+															href="customer-approved-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -186,8 +200,8 @@
 											</tr>
 
 											<tr>
-												<td>
-                                                    <a href="customer-view.php" class="customerID">ASAP202500002</a>
+                                                <td>
+                                                    <a href="customer-approved-view.php" class="customerID">ASAP202500002</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -203,13 +217,14 @@
 												</td>
 												<td class="text-truncate">vijay.desai@clariesup.in</td>
 												<td>98230 11456</td>
-												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td><span class="badge badge-soft-primary my-1 me-2">Sent to Credit</span></td>
+
 												<td>20/07/2025 11:25 AM</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="customer-view.php">
+															href="customer-approved-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -217,8 +232,8 @@
 											</tr>
 
 											<tr>
-												<td>
-                                                    <a href="customer-view.php" class="customerID">ASAP202500003</a>
+                                                <td>
+                                                    <a href="customer-approved-view.php" class="customerID">ASAP202500003</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -235,13 +250,14 @@
 												</td>
 												<td class="text-truncate">rahul.mehta@leernoca.in</td>
 												<td>99001 77665</td>
-												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td><span class="badge badge-soft-success my-1 me-2">Approved</span></td>
+
 												<td>19/07/2025 04:45 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="customer-view.php">
+															href="customer-approved-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -249,8 +265,8 @@
 											</tr>
 
 											<tr>
-												<td>
-                                                    <a href="customer-view.php" class="customerID">ASAP202500004</a>
+                                                <td>
+                                                    <a href="customer-approved-view.php" class="customerID">ASAP202500004</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -266,13 +282,14 @@
 												</td>
 												<td class="text-truncate">kunal.iyer@worthniza.in</td>
 												<td>99123 55667</td>
-												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+										    	<td><span class="badge badge-soft-primary my-1 me-2">Sent to Credit</span></td>
+
 												<td>18/07/2025 03:10 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="customer-view.php">
+															href="customer-approved-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -280,8 +297,8 @@
 											</tr>
 
 											<tr>
-												<td>
-                                                    <a href="customer-view.php" class="customerID">ASAP202500005</a>
+                                                <td>
+                                                    <a href="customer-approved-view.php" class="customerID">ASAP202500005</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -297,13 +314,14 @@
 												</td>
 												<td class="text-truncate">deepak.nair@asap.in</td>
 												<td>99872 33441</td>
-												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td><span class="badge badge-soft-success my-1 me-2">Approved</span></td>
+
 												<td>18/07/2025 12:30 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="customer-view.php">
+															href="customer-approved-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -325,5 +343,3 @@
 
     <!-- /Page Body End-->
     <?php include('footer.php') ?>
-
-	

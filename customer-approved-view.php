@@ -72,11 +72,11 @@
                                 <div class="banner-left">
                                     <div class="banner-icon">⚠</div>
                                     <div class="banner-content">
-                                    <div class="banner-title">Atul Sharma has some unverified information</div>
+                                    <div class="banner-title">Atul Sharma has verified all information</div>
                                     <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 15%;"></div>
+                                        <div class="progress-fill" style="width: 100%;"></div>
                                     </div>
-                                    <div class="progress-percent">15% completed</div>
+                                    <div class="progress-percent">100% completed</div>
                                     </div>
                                 </div>
 
@@ -101,17 +101,16 @@
                                             <div class="duedatelabel">Onboarded On : </div> July 01, 2025 15:20
                                         </div>
                                         <div class="FileStatus">
-                                            <div class="StatusBox">
-                                                <span class="badge badge-soft-warning">In Progress</span>
+                                           <div class="StatusBox">
+                                            <span id="customerStatusBadge" class="badge badge-soft-success">Approved</span>
                                             </div>
-                                        <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
-                                                <label class="custom-checkbox mb-0">
-                                                    <input type="checkbox" id="approvalCheckbox" />
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                                <span>Mark Profile Approved</span>
-                                            </button>
-                                            <!-- <a href="#" class="CreditApproveBTn"><iconify-icon icon="quill:send"></iconify-icon> Mark As Approved</a> -->
+                                          <!-- <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
+                                            <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
+                                            <span>Mark as Approved</span>
+                                        </button> -->
+                                           <a href="#" id="CreditApproveBTn" class="CreditApproveBTn">
+                                            <iconify-icon icon="quill:send"></iconify-icon> Send to Credit Team
+                                            </a>
                                         </div>
 
                                         <!-- <div class="enquiryID_container">
@@ -152,21 +151,21 @@
                                     </div>
                                     <div class="tab" data-tab="panel3">
                                     
-                                    <div class="step-title"> Guarantor/Co-Applicant Details</div>
+                                    <div class="step-title"> <iconify-icon icon="ph:seal-check-fill"></iconify-icon> Guarantor/Co-Applicant Details</div>
                                    
                                     </div>
                                     <div class="tab" data-tab="panel4">
                                   
-                                    <div class="step-title"> Business Details</div>
+                                    <div class="step-title"><iconify-icon icon="ph:seal-check-fill"></iconify-icon> Business Details</div>
                                    
                                     
                                     </div>
                                     <div class="tab" data-tab="panel5">
-                                     <div class="step-title"> Bank Details</div>
+                                     <div class="step-title"><iconify-icon icon="ph:seal-check-fill"></iconify-icon> Bank Details</div>
                                   
                                     </div>
                                     <div class="tab" data-tab="panel6">
-                                    <div class="step-title"> Beureu Reports</div>
+                                    <div class="step-title"><iconify-icon icon="ph:seal-check-fill"></iconify-icon> Beureu Reports</div>
                                     <!-- <div class="subtext"><div class="status">Rejected</div> </div> -->
                                    
                                     </div>
@@ -182,11 +181,11 @@
                                                </h6>
                                                <p>Review the customer’s personal information to ensure accuracy before continuing.</p>
                                             </div>
-                                            <div class="StepActions">
+                                            <!-- <div class="StepActions">
                                                     <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
 													<a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#VerifyModal"><iconify-icon icon="prime:check-square"></iconify-icon> Verify</a>
 													<a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#RejectModal"><iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject</a>
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="card-action-wrap">
 												<a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-vertical"></i></span></span></a>
 												<div class="dropdown-menu dropdown-menu-end ActionDropDown">
@@ -351,15 +350,17 @@
                                     <div class="tab-panel" id="panel2">
                                        <div class="TabInnerHead">
                                             <div class="HeadCnt">
-                                               <h6>KYC Document Review</h6>
+                                               <h6>KYC Document Review
+                                                 <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div>
+                                               </h6>
                                             <p>Verify the customer's identity by reviewing the submitted KYC documents, such as Aadhaar, PAN, and proof of address.</p>
                                             </div>
-                                              <div class="StepActions">
-                                                    <!-- <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a> -->
+                                              <!-- <div class="StepActions">
+                                                    <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
 													<a class="stepActionBtn" href="#" ><iconify-icon icon="iwwa:alert"></iconify-icon> Send KYC Docs Alert</a>
                                                     <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#VerifyModal"><iconify-icon icon="prime:check-square"></iconify-icon> Verify</a>
 													<a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#RejectModal"><iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject</a>
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="card-action-wrap">
 												<a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-vertical"></i></span></span></a>
 												<div class="dropdown-menu dropdown-menu-end ActionDropDown">
@@ -661,10 +662,12 @@
                                     <div class="tab-panel" id="panel3">
                                        <div class="TabInnerHead">
                                             <div class="HeadCnt">
-                                                <h6> Guarantor/Co-Applicant Details</h6>
+                                                <h6> Guarantor/Co-Applicant Details
+                                                     <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div>
+                                                </h6>
                                                 <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p>
                                             </div>
-                                             <div class="StepActions">
+                                             <!-- <div class="StepActions">
                                                 <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="basil:add-outline" ></iconify-icon> Add New</a>
                                                 <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsModal">
                                                     <iconify-icon icon="prime:check-square"></iconify-icon> Verify 
@@ -673,7 +676,7 @@
                                                     <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject 
                                                 </a>
                                                     
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="card-action-wrap">
                                                 <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
                                                 <span class="icon">
@@ -821,10 +824,12 @@
                                     <div class="tab-panel" id="panel4">
                                         <div class="TabInnerHead">
                                                 <div class="HeadCnt">
-                                                    <h6>Business Details</h6>
+                                                    <h6>Business Details
+                                                         <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div>
+                                                    </h6>
                                                     <p>Review the customer’s business information including type, ownership, income, and registration details before proceeding.</p>
                                                 </div>
-                                                <div class="StepActions">
+                                                <!-- <div class="StepActions">
                                                     <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BusinessDetailEdit"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
 
                                                     <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#BusinessVerifyModal">
@@ -834,7 +839,7 @@
                                                         <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject 
                                                     </a>
                                                     
-                                            </div>
+                                            </div> -->
                                                 <!-- <div class="card-action-wrap">
                                                     <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
                                                     <span class="icon">
@@ -978,10 +983,10 @@
                                     <div class="tab-panel" id="panel5">
                                      <div class="TabInnerHead">
                                         <div class="HeadCnt">
-                                            <h6>Bank Details</h6>
+                                            <h6>Bank Details  <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div></h6>
                                             <p>Review the customer's bank information including account holder name, account number, IFSC code, and statements before proceeding.</p>
                                         </div>
-                                         <div class="StepActions">
+                                         <!-- <div class="StepActions">
                                                     <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BankDetailEdit">
                                                         <iconify-icon icon="basil:edit-outline"></iconify-icon> Edit
                                                     </a>
@@ -991,7 +996,7 @@
                                                     <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#BankRejectModal">
                                                         <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject
                                                     </a>
-                                            </div>
+                                            </div> -->
                                         <!-- <div class="card-action-wrap">
                                             <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
                                             <span class="icon">
@@ -1089,7 +1094,7 @@
                                     <div class="tab-panel" id="panel6">
                                     <div class="TabInnerHead">
                                                 <div class="HeadCnt">
-                                                    <h6>Bureau Report Summary</h6>
+                                                    <h6>Bureau Report Summary  <div class="subtext"> <div class="status-success">Verified</div> 16 July,2025</div></h6>
                                                     <p>Review the customer's credit and financial history from leading bureaus before making loan decisions.</p>
 
                                                 </div>
@@ -1189,35 +1194,36 @@
 
         <!-- Modal Header -->
         <div class="ModalHead">
-          <h5 class="fw-semibold">
-           <iconify-icon icon="quill:send"></iconify-icon>
-            Approval Confirmation
-          </h5>
-          <button type="button" class="btnClose btn btn-sm btn-bg-transparent" data-bs-dismiss="modal">
+        <h5 class="fw-semibold" id="approvalModalTitle">
+            <iconify-icon icon="quill:send"></iconify-icon>
+            Forward to Credit Team
+        </h5>
+        <button type="button" class="btnClose btn btn-sm btn-bg-transparent" data-bs-dismiss="modal">
             <iconify-icon icon="oui:cross"></iconify-icon>
-          </button>
+        </button>
         </div>
 
         <!-- Modal Body -->
         <div class="modal-body">
-          <div class="ContentWrapper">
-            <h4>Approve Customer Details</h4>
-            <p>
-              Please confirm that you have thoroughly reviewed and verified all the customer details including identity, contact information, documents, and financial background.
-              Once approved, the customer will be moved to the <strong>Approved Customers</strong> list.
+        <div class="ContentWrapper">
+            <h4 id="approvalModalHeading">Send Profile for Credit Assessment</h4>
+            <p id="approvalModalText">
+            You are about to forward this customer's profile to the <strong>Credit Team</strong> for evaluation.<br>
+            Please ensure all documents, identity verification, and financial data have been reviewed.<br><br>
+            Once submitted, the Credit Team will proceed with credit checks, risk assessment, and final eligibility confirmation.
             </p>
 
             <!-- Footer Buttons -->
             <div class="FooterActionStyle1">
-              <button class="btn btn-cancel ApprovalCancelBtn" data-bs-dismiss="modal">Cancel</button>
-              <button class="btn btn-theme ApprovalYesBtn" data-bs-dismiss="modal">Yes, Approved</button>
+            <button class="btn btn-cancel ApprovalCancelBtn" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-theme ApprovalYesBtn" data-bs-dismiss="modal">Yes, Send to Credit</button>
             </div>
-          </div>
+        </div>
         </div>
 
         <!-- Optional Footer Branding -->
         <div class="silverrightloog">
-          <img src="dist/img/newimages/silverlogo.png" alt="logo">
+        <img src="dist/img/newimages/silverlogo.png" alt="logo">
         </div>
 
       </div>
@@ -3040,32 +3046,57 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
      
-<!-- Mark as Approved button js and move to the customer approved list -->
 <script>
-  const approveBtn = document.getElementById('markAsApprovedBtn');
-  const approvalCheckbox = document.getElementById('approvalCheckbox');
-  let showModal = false;
+  document.querySelector('.CreditApproveBTn').addEventListener('click', function (e) {
+    e.preventDefault();
 
-  approveBtn.addEventListener('click', function () {
-    // Only trigger modal if checkbox is not already checked
-    if (!approvalCheckbox.checked) {
-      showModal = true;
-      const modal = new bootstrap.Modal(document.getElementById('CustomerApprovalModal'));
-      modal.show();
-    } else {
-      // If unchecked manually, no action needed
-      approvalCheckbox.checked = false;
-    }
-  });
+    // Set modal content for "Send to Credit Team"
+    document.getElementById('approvalModalTitle').innerHTML = `
+      <iconify-icon icon="quill:send"></iconify-icon> Forward to Credit Team
+    `;
+    document.getElementById('approvalModalHeading').textContent = 'Send Profile for Credit Assessment';
+    document.getElementById('approvalModalText').innerHTML = `
+      You are about to forward this customer's profile to the <strong>Credit Team</strong> for evaluation.<br>
+      Please ensure all documents, identity verification, and financial data have been reviewed.<br><br>
+      Once submitted, the Credit Team will proceed with credit checks, risk assessment, and final eligibility confirmation.
+    `;
+    document.querySelector('.ApprovalYesBtn').textContent = 'Yes, Send to Credit';
 
-  // YES: redirect
-  document.querySelector('.ApprovalYesBtn').addEventListener('click', function () {
-    approvalCheckbox.checked = true; // Confirm check
-    window.location.href = 'customer-approved.php';
-  });
+    // Show the modal
+    const modal = new bootstrap.Modal(document.getElementById('CustomerApprovalModal'));
+    modal.show();
 
-  // CANCEL: uncheck
-  document.querySelector('.ApprovalCancelBtn').addEventListener('click', function () {
-    approvalCheckbox.checked = false;
+    // Handle confirmation
+document.querySelector('.ApprovalYesBtn').onclick = function () {
+  // Change status badge
+  const badge = document.getElementById('customerStatusBadge');
+  badge.classList.remove('badge-soft-success');
+  badge.classList.add('badge-soft-primary');
+  badge.textContent = 'Sent to Credit';
+
+  // Disable the Send to Credit button
+  const creditBtn = document.getElementById('CreditApproveBTn');
+  creditBtn.classList.add('disabled');
+  creditBtn.setAttribute('aria-disabled', 'true');
+  creditBtn.style.pointerEvents = 'none'; // prevent further clicks
+  creditBtn.style.opacity = '0.6'; // optional: make it visually look disabled
+
+  // Optional: Redirect after action
+  // window.location.href = 'send-to-credit.php';
+};
+
+    // Reset modal on cancel
+    document.querySelector('.ApprovalCancelBtn').onclick = function () {
+      document.getElementById('approvalModalTitle').innerHTML = `
+        <iconify-icon icon="quill:send"></iconify-icon> Approval Confirmation
+      `;
+      document.getElementById('approvalModalHeading').textContent = 'Approve Customer Details';
+      document.getElementById('approvalModalText').innerHTML = `
+        Please confirm that you have thoroughly reviewed and verified all the customer details including identity, contact information, documents, and financial background.
+        Once approved, the customer will be moved to the <strong>Approved Customers</strong> list.
+      `;
+      document.querySelector('.ApprovalYesBtn').textContent = 'Yes, Approved';
+    };
   });
 </script>
+

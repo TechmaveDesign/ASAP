@@ -387,11 +387,11 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Approved
+                                                <a class="nav-link" href="customer-approved.php"><span class="nav-link-text">Approved
                                                         Customers</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Rejected
+                                                <a class="nav-link" href="customer-rejected.php"><span class="nav-link-text">Rejected
                                                         Customers</span></a>
                                             </li>
 
@@ -401,7 +401,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="credit-assessment.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
                                             <img src="dist/img/newimages/icons/Credit-Assessment-Status.png" alt="">
@@ -410,7 +410,7 @@
                                     <span class="nav-link-text">Credit Assessment Status</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="index2.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
@@ -419,9 +419,9 @@
                                     </span>
                                     <span class="nav-link-text">Final Credit Assessment Status</span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="customer-consent.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
                                             <img src="dist/img/newimages/icons/customer-consent.png" alt="">
@@ -431,7 +431,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="disbursement-approval.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
                                             <img src="dist/img/newimages/icons/borrowicon.png" alt="">
