@@ -90,7 +90,7 @@
                                         <div class="user-details">
                                         <div class="user-email">Atul Sharma</div>
                                         <div class="user-id">
-                                            customer_id: <code>ASAP202500001</code>
+                                            customer_id: <code>VASAP202500001</code>
                                         </div>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
                                             <div class="StatusBox">
                                                 <span class="badge badge-soft-warning">In Progress</span>
                                             </div>
-                                        <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
+                                        <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                                 <label class="custom-checkbox mb-0">
                                                     <input type="checkbox" id="approvalCheckbox" />
                                                     <span class="checkmark"></span>
@@ -183,9 +183,10 @@
                                                <p>Review the customer’s personal information to ensure accuracy before continuing.</p>
                                             </div>
                                             <div class="StepActions">
-                                                    <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
+                                                   
 													<a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#VerifyModal"><iconify-icon icon="prime:check-square"></iconify-icon> Verify</a>
 													<a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#RejectModal"><iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject</a>
+                                                     <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
                                             </div>
                                             <!-- <div class="card-action-wrap">
 												<a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-vertical"></i></span></span></a>
@@ -286,7 +287,7 @@
                                                 <label class="loan-card selected">
                                                     <input type="radio" name="loanType" value="personal_loan">
                                                     <div class="loan-card-body">
-                                                        <h4><img src="dist/img/newimages/logotransparent.png" alt="ASAP Finance Logo" class="inline-logo"> SolarBiz Loan</h4>
+                                                        <h4><img src="dist/img/newimages/logotransparent.png" alt="VASAP Finance Logo" class="inline-logo"> SolarBiz Loan</h4>
                                                         <ul>
                                                             <li>
 
@@ -356,9 +357,10 @@
                                             </div>
                                               <div class="StepActions">
                                                     <!-- <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#EditPersonalDetails"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a> -->
-													<a class="stepActionBtn" href="#" ><iconify-icon icon="iwwa:alert"></iconify-icon> Send KYC Docs Alert</a>
+													
                                                     <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#VerifyModal"><iconify-icon icon="prime:check-square"></iconify-icon> Verify</a>
 													<a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#RejectModal"><iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject</a>
+                                                    <a class="stepActionBtn" href="#" ><iconify-icon icon="iwwa:alert"></iconify-icon> Send KYC Docs Alert</a>
                                             </div>
                                             <!-- <div class="card-action-wrap">
 												<a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="more-vertical"></i></span></span></a>
@@ -665,14 +667,14 @@
                                                 <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p>
                                             </div>
                                              <div class="StepActions">
-                                                <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="basil:add-outline" ></iconify-icon> Add New</a>
+                                                
                                                 <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsModal">
                                                     <iconify-icon icon="prime:check-square"></iconify-icon> Verify 
                                                 </a>
                                                 <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsRejectModal">
                                                     <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject 
                                                 </a>
-                                                    
+                                                   <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="basil:add-outline" ></iconify-icon> Add New</a> 
                                             </div>
                                             <!-- <div class="card-action-wrap">
                                                 <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
@@ -825,7 +827,7 @@
                                                     <p>Review the customer’s business information including type, ownership, income, and registration details before proceeding.</p>
                                                 </div>
                                                 <div class="StepActions">
-                                                    <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BusinessDetailEdit"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
+                                                   
 
                                                     <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#BusinessVerifyModal">
                                                         <iconify-icon icon="prime:check-square"></iconify-icon> Verify 
@@ -833,6 +835,7 @@
                                                     <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#BusinessRejectModal">
                                                         <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject 
                                                     </a>
+                                                     <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BusinessDetailEdit"><iconify-icon icon="basil:edit-outline"></iconify-icon> Edit</a>
                                                     
                                             </div>
                                                 <!-- <div class="card-action-wrap">
@@ -982,14 +985,15 @@
                                             <p>Review the customer's bank information including account holder name, account number, IFSC code, and statements before proceeding.</p>
                                         </div>
                                          <div class="StepActions">
-                                                    <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BankDetailEdit">
-                                                        <iconify-icon icon="basil:edit-outline"></iconify-icon> Edit
-                                                    </a>
+                                                 
                                                     <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#BankVerifyModal">
                                                         <iconify-icon icon="prime:check-square"></iconify-icon> Verify
                                                     </a>
                                                     <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#BankRejectModal">
                                                         <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject
+                                                    </a>
+                                                       <a class="stepActionBtn" data-bs-toggle="modal" data-bs-target="#BankDetailEdit">
+                                                        <iconify-icon icon="basil:edit-outline"></iconify-icon> Edit
                                                     </a>
                                             </div>
                                         <!-- <div class="card-action-wrap">
@@ -3042,7 +3046,7 @@ document.addEventListener('DOMContentLoaded', function () {
      
 <!-- Mark as Approved button js and move to the customer approved list -->
 <script>
-  const approveBtn = document.getElementById('markAsApprovedBtn');
+  const approveBtn = document.getElementById('markVASAPprovedBtn');
   const approvalCheckbox = document.getElementById('approvalCheckbox');
   let showModal = false;
 

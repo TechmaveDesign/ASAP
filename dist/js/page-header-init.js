@@ -50,9 +50,36 @@ const pageConfig = {
       "disbursement-approval.php": {
     title: "Disbursement Approval",
     breadcrumbs: ["Dashboard", "Disbursement Approval"]
-  }
+  },
+    "disbursement-scheduled.php": {
+    title: "All Scheduled Disbursements",
+    breadcrumbs: ["Manage Disbursement", "Scheduled Disbursement"]
+  },
+    "disbursement-scheduled-view.php": {
+    title: "Scheduled Customer Details",
+    breadcrumbs: ["Manage Disbursement", "Scheduled Customer Details"]
+  },
+  "disbursement-today.php": {
+    title: "Today Disbursements",
+    breadcrumbs: ["Manage Disbursement", "Today Disbursements"]
+  },
+    "disbursement-today-view.php": {
+    title: "Today Disbursement Customer Details",
+    breadcrumbs: ["Manage Disbursement", "Today Disbursements"]
+  },
+    "disbursed-due.php": {
+    title: "Due Disbursements",
+    breadcrumbs: ["Manage Disbursement", "Due Disbursements"]
+  },
+    "disbursed-due-view.php": {
+    title: "Due Disbursement Customer Details",
+    breadcrumbs: ["Manage Disbursement", "Due Disbursements"]
+  },
+   "disbursed-loans.php": {
+    title: "All Disbursed Loans",
+    breadcrumbs: ["Manage Disbursement", "All Disbursed Loans"]
+  },
 
- 
   // Add more pages if needed
 };
 
@@ -60,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let path = window.location.pathname;
   let currentPage = path.substring(path.lastIndexOf('/') + 1);
 
-  // ✅ Treat empty string (like from /asap-admin/) as index.php
+  // ✅ Treat empty string (like from /VASAP-admin/) as index.php
   if (!currentPage || currentPage === '') {
     currentPage = 'index.php';
   }

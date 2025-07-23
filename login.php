@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login | ASAP - Super Admin</title>
+	<title>Login | VASAP - Super Admin</title>
 	<meta name="description" content="" />
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="dist/img/newimages/bgaimage.png">
@@ -25,7 +25,7 @@
 			width: 95px;
 		}
 
-		.copyrightasapImg {
+		.copyrightVASAPImg {
 			width: 40px;
 		}
 
@@ -321,7 +321,7 @@
 						<div class="col-xl-12">
 							<p class="footer-text">
 								<span class="copy-text"><img src="dist/img/newimages/logotransparent.png" alt=""
-										class="copyrightasapImg"> Finance © 2025 All rights reserved.</span>
+										class="copyrightVASAPImg"> Finance © 2025 All rights reserved.</span>
 								<a href="##">Privacy Policy</a>
 								<span class="footer-link-sep">|</span>
 								<a href="##">Terms</a>

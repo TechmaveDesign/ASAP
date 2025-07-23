@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASAP Finance - Super admin Dashboard</title>
-    <meta name="description" content="ASAP Finance - Super admin Dashboard" />
+    <title>VASAP Finance - Super admin Dashboard</title>
+    <meta name="description" content="VASAP Finance - Super admin Dashboard" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="dist/img/newimages/bgaimage.png">
@@ -38,6 +38,9 @@
 </head>
 
 <body>
+      <div id="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
     <!-- Wrapper -->
     <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
         <!-- Top Navbar -->
@@ -138,7 +141,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div>
-                                                        <div class="notifications-text">You have a follow up with ASAP
+                                                        <div class="notifications-text">You have a follow up with VASAP
                                                             Head on Friday, Dec 19 at 9:30 am</div>
                                                         <div class="notifications-info">
                                                             <div class="notifications-time">Yesterday, 9:25 PM</div>
@@ -296,7 +299,7 @@
                 <div class="menu-content-wrap">
                     <div class="menu-group">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="index.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
@@ -456,26 +459,23 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Scheduled
+                                                <a class="nav-link" href="disbursement-scheduled.php"><span class="nav-link-text">Scheduled
                                                         Disbursement</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Today
+                                                <a class="nav-link" href="disbursement-today.php"><span class="nav-link-text">Today
                                                         Disbursement</span></a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Pending
-                                                        Disbursement</span></a>
+                                                <a class="nav-link" href="disbursed-due.php"><span class="nav-link-text">Due Disbursement</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text"> Disbursed
-                                                        Loan</span></a>
+                                                <a class="nav-link" href="disbursed-loans.php"><span class="nav-link-text"> Disbursed Loan</span></a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text"> Audit
-                                                        Trails</span></a>
-                                            </li>
+                                            <!-- <li class="nav-item">
+                                                <a class="nav-link" href="##"><span class="nav-link-text"> Audit Trails</span></a>
+                                            </li> -->
 
                                         </ul>
                                     </li>
@@ -609,7 +609,7 @@
                                 </a>
                             </li> -->
 
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
                                     data-bs-target="#dash_settings">
                                     <span class="nav-icon-wrap">
@@ -641,37 +641,8 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
-                                    data-bs-target="#dash_Compliance">
-                                    <span class="nav-icon-wrap">
-                                        <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/Compliance.png" alt="">
-                                        </span>
-                                    </span>
-                                    <span class="nav-link-text">Compliance & Legal</span>
-                                </a>
-                                <ul id="dash_Compliance" class="nav flex-column collapse nav-children">
-                                    <li class="nav-item">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span
-                                                        class="nav-link-text">RBI Guidelines</span></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Consent Forms</span></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span
-                                                        class="nav-link-text">Legal Notice Module</span></a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </li>
-                                </ul>
                             </li> -->
-
+                          
                         </ul>
                     </div>
 

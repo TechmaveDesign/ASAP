@@ -414,7 +414,7 @@
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">morgan@ASAP.com</td>
+												<td class="text-truncate">morgan@VASAP.com</td>
 												<td>+145 52 5689</td>
 												<td><span class="badge badge-soft-success  my-1  me-2">New
 														Customer</span></td>
@@ -558,7 +558,7 @@
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">jaquljoker@ASAP.com</td>
+												<td class="text-truncate">jaquljoker@VASAP.com</td>
 												<td>+145 53 4715</td>
 												<td><span class="badge badge-soft-success  my-1  me-2">New
 														Customer</span></td>

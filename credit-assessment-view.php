@@ -99,7 +99,7 @@
                                         <div class="user-details">
                                             <div class="user-email">Atul Sharma</div>
                                             <div class="user-id">
-                                                customer_id: <code>ASAP202500001</code>
+                                                customer_id: <code>VASAP202500001</code>
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@
                                             <span id="customerStatusBadge" class="badge badge-soft-primary d-none">Customer Consent Sent</span>
                                             </div>
 
-                                                                                        <!-- <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
+                                                                                        <!-- <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                             <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
                                             <span>Mark as Approved</span>
                                         </button> -->
@@ -262,7 +262,7 @@
                                                     <input type="radio" name="loanType" value="personal_loan">
                                                     <div class="loan-card-body">
                                                         <h4><img src="dist/img/newimages/logotransparent.png"
-                                                                alt="ASAP Finance Logo" class="inline-logo"> SolarBiz
+                                                                alt="VASAP Finance Logo" class="inline-logo"> SolarBiz
                                                             Loan</h4>
                                                         <ul>
                                                             <li>
@@ -1335,16 +1335,13 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">Category</label>
+                                        <label class="form-label">Loan Type</label>
                                         <select class="form-control select2">
-                                            <option value="">Select</option>
-                                            <option value="1">Business Loan</option>
-                                            <option value="2">Personal loan</option>
-                                            <option value="3">Raw Material Financing</option>
-                                            <option value="8">Outstanding Loan</option>
-                                            <option value="9">LRD</option>
-                                            <option value="10">EPVI</option>
-                                            <option value="11">Raw Material Financing - Platina</option>
+                                           <option value="" >Select an option</option>
+                                            <option value="Secured Solar Loans" >Secured Solar Loans</option>
+                                            <option value="Unsecured Solar Loans" >Unsecured Solar Loans</option>
+                                            <option value="Secured Business Loans" >Secured Business Loans</option>
+                                            <option value="Unsecured Business Loans" >Unsecured Business Loans</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1353,8 +1350,10 @@
                                         <label class="form-label">Product Name</label>
                                         <select class="form-control select2">
                                             <option value="">Select</option>
-                                            <option value="1">Secured</option>
-                                            <option value="2">Unsecured</option>
+                                            <option value="1">SolarBiz Loan</option>
+                                            <option value="2">Vyapar Suraksha Loan</option>
+                                            <option value="3">SolarKrishi Loan</option>
+
 
                                         </select>
                                     </div>

@@ -90,7 +90,7 @@
                                         <div class="user-details">
                                         <div class="user-email">Atul Sharma</div>
                                         <div class="user-id">
-                                            customer_id: <code>ASAP202500001</code>
+                                            customer_id: <code>VASAP202500001</code>
                                         </div>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
                                            <div class="StatusBox">
                                             <span id="customerStatusBadge" class="badge badge-soft-success">Approved</span>
                                             </div>
-                                          <!-- <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
+                                          <!-- <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                             <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
                                             <span>Mark as Approved</span>
                                         </button> -->
@@ -285,7 +285,7 @@
                                                 <label class="loan-card selected">
                                                     <input type="radio" name="loanType" value="personal_loan">
                                                     <div class="loan-card-body">
-                                                        <h4><img src="dist/img/newimages/logotransparent.png" alt="ASAP Finance Logo" class="inline-logo"> SolarBiz Loan</h4>
+                                                        <h4><img src="dist/img/newimages/logotransparent.png" alt="VASAP Finance Logo" class="inline-logo"> SolarBiz Loan</h4>
                                                         <ul>
                                                             <li>
 

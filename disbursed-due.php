@@ -162,14 +162,14 @@
 												<th>Email Address</th>
 												<th>Phone</th>
 												<th>Status</th>
-												<th>Onboard Date Time</th>
+												<th>Due Date</th>
 												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
                                                 <td>
-                                                    <a href="disbursement-view.php" class="customerID">VASAP202500001</a>
+                                                    <a href="disbursed-due-view.php" class="customerID">VASAP202500001</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -185,14 +185,14 @@
 												</td>
 												<td class="text-truncate">amit.sharma@VASAP.in</td>
 												<td>98765 43210</td>
-													<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
+													<td><span class="badge badge-soft-warning my-1 me-2">Pending Disbursement</span></td>
 
-												<td>20/07/2025 10:15 AM</td>
+												<td>25/07/2025</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="disbursement-view.php">
+															href="disbursed-due-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -201,7 +201,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="disbursement-view.php" class="customerID">VASAP202500002</a>
+                                                    <a href="disbursed-due-view.php" class="customerID">VASAP202500002</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -217,14 +217,14 @@
 												</td>
 												<td class="text-truncate">vijay.desai@clariesup.in</td>
 												<td>98230 11456</td>
-										    	<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
+										    	<td><span class="badge badge-soft-warning my-1 me-2">Pending Disbursement</span></td>
 
-												<td>20/07/2025 11:25 AM</td>
+												<td>25/07/2025</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="disbursement-view.php">
+															href="disbursed-due-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -233,7 +233,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="disbursement-view.php" class="customerID">VASAP202500003</a>
+                                                    <a href="disbursed-due-view.php" class="customerID">VASAP202500003</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -250,13 +250,13 @@
 												</td>
 												<td class="text-truncate">rahul.mehta@leernoca.in</td>
 												<td>99001 77665</td>
-											  	<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
-												<td>19/07/2025 04:45 PM</td>
+											  	<td><span class="badge badge-soft-warning my-1 me-2">Pending Disbursement</span></td>
+												<td>25/07/2025</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="disbursement-view.php">
+															href="disbursed-due-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -265,7 +265,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="disbursement-view.php" class="customerID">VASAP202500004</a>
+                                                    <a href="disbursed-due-view.php" class="customerID">VASAP202500004</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -281,13 +281,13 @@
 												</td>
 												<td class="text-truncate">kunal.iyer@worthniza.in</td>
 												<td>99123 55667</td>
-										    	<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
-												<td>18/07/2025 03:10 PM</td>
+										    	<td><span class="badge badge-soft-warning my-1 me-2">Pending Disbursement</span></td>
+												<td>25/07/2025</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="disbursement-view.php">
+															href="disbursed-due-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>
@@ -296,7 +296,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="disbursement-view.php" class="customerID">VASAP202500005</a>
+                                                    <a href="disbursed-due-view.php" class="customerID">VASAP202500005</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -312,14 +312,14 @@
 												</td>
 												<td class="text-truncate">deepak.nair@VASAP.in</td>
 												<td>99872 33441</td>
-												<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
+												<td><span class="badge badge-soft-warning my-1 me-2">Pending Disbursement</span></td>
 
-												<td>18/07/2025 12:30 PM</td>
+												<td>25/07/2025</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
 															data-bs-toggle="tooltip" title="View Customer Details"
-															href="disbursement-view.php">
+															href="disbursed-due-view.php">
 															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
 														</a>
 													</div>

@@ -99,7 +99,7 @@
                                         <div class="user-details">
                                             <div class="user-email">Atul Sharma</div>
                                             <div class="user-id">
-                                                customer_id: <code>ASAP202500001</code>
+                                                customer_id: <code>VASAP202500001</code>
                                             </div>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                                             <div class="StatusBox">
                                             <span id="customerStatusBadge" class="badge badge-soft-warning">Waiting For Approval</span>
                                             </div>
-                                                                                        <!-- <button type="button" id="markAsApprovedBtn" class="btn markAsApprovedBtn d-flex align-items-center gap-2">
+                                                                                        <!-- <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                             <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
                                             <span>Mark as Approved</span>
                                         </button> -->
@@ -146,7 +146,21 @@
 
                             </div>
 
-                            <section class="CustomerInformation">
+                            <div class="CustomerApprovalTab DisburesmentTab">
+                                <!-- TAB HEADERS -->
+                                <div class="tab-header ">
+                                    <div class="tab active" data-tab="panel1">
+                                    <div class="step-title">Customer Details</div>
+                                    <!-- <div class="subtext"> <div class="status">Verified</div> 16 July,2025</div> -->
+                                    </div>
+                                    <div class="tab" data-tab="panel2">
+                                    <div class="step-title"> Customer Consent Details</div>
+                                    </div>
+                                </div>
+
+                                 <div class="tab-content p-0">
+                                    <div class="tab-panel active" id="panel1">
+                                        <section class="CustomerInformation">
                                 <div class="TabInnerHead">
                                     <div class="HeadCnt">
                                         <h6>Customer Information
@@ -261,7 +275,7 @@
                                                     <input type="radio" name="loanType" value="personal_loan">
                                                     <div class="loan-card-body">
                                                         <h4><img src="dist/img/newimages/logotransparent.png"
-                                                                alt="ASAP Finance Logo" class="inline-logo"> SolarBiz
+                                                                alt="VASAP Finance Logo" class="inline-logo"> SolarBiz
                                                             Loan</h4>
                                                         <ul>
                                                             <li>
@@ -1175,6 +1189,123 @@
 
                                 </div>
                             </section>
+                                      </div>
+                                       <div class="tab-panel active" id="panel2">
+
+                                       <section class="CustomerInformation">
+                                            <div class="TabInnerHead">
+                                                <div class="HeadCnt">
+                                                    <h6> Customer Consent Details
+                                                        <!-- <div class="subtext"> <div class="status-success">Accepted</div> 16 July,2025</div> -->
+                                                    </h6>
+                                                    <!-- <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p> -->
+                                                </div>
+                                                <!-- <div class="StepActions">
+                                                            <a class="ScheduleDisbuBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement</a>
+                                                            <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorAdd">
+                                                                <iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement
+                                                            </a>
+                                                            <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsRejectModal">
+                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject For Customer Consent
+                                                            </a>
+                                                                
+                                                        </div> -->
+                                                <!-- <div class="card-action-wrap">
+                                                            <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
+                                                            <span class="icon">
+                                                                <span class="feather-icon">
+                                                                <i data-feather="more-vertical"></i>
+                                                                </span>
+                                                            </span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end ActionDropDown">
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="basil:add-outline" ></iconify-icon> Add New</a>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsModal">
+                                                                <iconify-icon icon="prime:check-square"></iconify-icon> Verify 
+                                                            </a>
+                                                            <a class="dropdown-item rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsRejectModal">
+                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject 
+                                                            </a>
+                                                            </div>
+                                                        </div> -->
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="CustomCard">
+                                                        <!-- <div class="CustomCardHeader">
+                                                            <h6 class="CustomCardTitle">1. Co-Applicant / Guarantor Details</h6>
+                                                       
+                                                        </div> -->
+                                                        <div class="CustomCardBody">
+                                                            <div class="ReportData_fields">
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">ROI Type</div>
+                                                                    <div class="userenuData">Reducing ROI</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Amount</div>
+                                                                    <div class="userenuData">₹500000</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Product Name</div>
+                                                                    <div class="userenuData">Business Loan / Unsecured</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Tenure </div>
+                                                                    <div class="userenuData">36 Month</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Interest</div>
+                                                                    <div class="userenuData">18%</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Total Interest</div>
+                                                                    <div class="userenuData">₹150743</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Plateform Fee
+                                                                    </div>
+                                                                    <div class="userenuData">₹10800</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Insurance Fee</div>
+                                                                    <div class="userenuData">₹8433</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Net Disbursement Amount</div>
+                                                                    <div class="userenuData">₹480,767</div>
+                                                                </div>
+                                                                 <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Include PF/Insurance Fee</div>
+                                                                    <div class="userenuData">Yes</div>
+                                                                </div>
+                                                                 <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Include Extradays </div>
+                                                                    <div class="userenuData">No</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </section>
+                                      </div>
+                                   </div>   
+                             </div>
+
+                            
 
 
 
@@ -1492,7 +1623,100 @@
   Assessment Modern Modal style 1 Code Here Start Here
 ---------------------------------------------------------->
 
+<!----------------------------------------------------------------------------
+  Add Co-Applicant/Gurantor Detail Modern Modal style 1 Code Here Start Here
+--------------------------------------------------------------------------->
+   
+   <div class="ModalAddGurantor">
+        <div class="modal fade" id="GurantorAdd" tabindex="-1" aria-labelledby="KYCverifyModal" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content rounded-7 shadow">
+                    <div class="modal-header CustomModal">
+                        <h5 class="ModalTitle">
+                            <div class="IconBox">
+                                <iconify-icon icon="hugeicons:ai-user"></iconify-icon>
+                            
+                            </div>
+                            <div class="TitleVox">
+                              Schedule Disbursement
+                            <span>Select disbursement date.</span>
+                            </div>
+                        
 
+                        </h5>
+                       
+                        <button type="button" class="btnClose btn btn-sm btn-bg-transparent" data-bs-dismiss="modal">
+                            <iconify-icon icon="oui:cross"></iconify-icon>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="form-label">Disburse Date </label>
+                                <input type="text" class="form-control  Ndatepicker" placeholder="Enter full name">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-2">
+                            <div class="CustomCard">
+                                                        <!-- <div class="CustomCardHeader">
+                                                            <h6 class="CustomCardTitle">1. Co-Applicant / Guarantor Details</h6>
+                                                       
+                                                        </div> -->
+                                                        <div class="CustomCardBody">
+                                                            <div class="ReportData_fields BussinessRepport">
+                                                               <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Product Name</div>
+                                                                    <div class="userenuData">Business Loan / Unsecured</div>
+                                                                </div>
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Approved Tenure </div>
+                                                                    <div class="userenuData">36 Month</div>
+                                                                </div>
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Approved Amount Amount</div>
+                                                                    <div class="userenuData">₹500000</div>
+                                                                </div>
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">ROI Type</div>
+                                                                    <div class="userenuData">Reducing ROI</div>
+                                                                </div>
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Product ROI </div>
+                                                                    <div class="userenuData">18%</div>
+                                                                </div>
+
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Net Disbursement Amount</div>
+                                                                    <div class="userenuData">₹480,767</div>
+                                                                </div>
+                                                                 <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Is Interest Already Paid</div>
+                                                                    <div class="userenuData">No</div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                        </div>
+
+
+                        
+                        
+                     </div>
+                    
+                </div>
+                <div class="modal-footer">
+                   <button class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                   <button class="btn btn-theme" data-bs-dismiss="modal">Approved & Scheduled</button>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+<!----------------------------------------------------------------------------
+  Add Co-Applicant/Gurantor Detail Modern Modal style 1 Code Here End Here
+--------------------------------------------------------------------------->
 
             <!-- /Page Body End-->
             <?php include('footer.php') ?>
@@ -1926,3 +2150,33 @@
     creditBtn.style.opacity = '0.6';
   });
 </script>
+
+<link href="dist/customplugins/datepicker-new/datepicker.min.css" rel="stylesheet" />
+    <script src="dist/customplugins/datepicker-new/scripts.min.js"></script>
+    <!-- .end calendar includes -->
+
+     <!-- Date Time Picker -->
+    <script type="text/javascript">
+        $(".Ndatepicker").calendar({
+            singleDate: true,
+            calendarCount: 1,
+            showHeader: false,
+            showFooter: false,
+            autoCloseOnSelect: true,
+            showTimePickers: false,
+            format: "DD/MM/YYYY",
+            onSelect: function(date) {
+                // Get the selected date
+                const selectedDate = new Date(date);
+                
+                // Update individual components
+                document.getElementById('display-date').textContent = selectedDate.getDate();
+                document.getElementById('display-month-year').textContent = 
+                    selectedDate.toLocaleString('default', { month: 'short' }) + ' ' + selectedDate.getFullYear();
+                document.getElementById('display-day').textContent = 
+                    selectedDate.toLocaleString('default', { weekday: 'long' });
+                
+            }
+        });
+    </script>
+ 

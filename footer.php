@@ -3,7 +3,7 @@
 		<footer class="container-xxl footer">
 			<div class="row">
 				<div class="col-xl-12">
-					<p class="footer-text"><span class="copy-text">ASAP © 2025 All rights reserved.</span></p>
+					<p class="footer-text"><span class="copy-text">VASAP © 2025 All rights reserved.</span></p>
 				</div>
 				
 			</div>
@@ -313,8 +313,57 @@
     });
   </script>
 
+<script>
+	// Wait for full page load (including images, scripts, etc.)
+window.addEventListener("load", function () {
+  const loader = document.getElementById("page-loader");
+  const content = document.getElementById("main-content");
+
+  loader.style.display = "none";
+  content.style.display = "block";
+});
+</script>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".dashsidebarWrapper");
+    if (!sidebar) return;
+
+    const currentUrl = window.location.pathname.split("/").pop();
+
+    // Scoped nav links
+    const navLinks = sidebar.querySelectorAll(".nav-link[href]:not([href='javascript:void(0);'])");
+
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute("href").split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+
+        const parentCollapse = link.closest(".collapse");
+        if (parentCollapse) {
+          parentCollapse.classList.add("show");
+
+          const parentToggle = parentCollapse.previousElementSibling;
+          if (parentToggle && parentToggle.classList.contains("nav-link")) {
+            parentToggle.classList.add("active");
+          }
+
+          const parentNavItem = parentCollapse.closest(".nav-item");
+          if (parentNavItem) {
+            parentNavItem.classList.add("active");
+          }
+        } else {
+          const parentLi = link.closest(".nav-item");
+          if (parentLi) {
+            parentLi.classList.add("active");
+          }
+        }
+      }
+    });
+  });
+</script>
 
 
 	

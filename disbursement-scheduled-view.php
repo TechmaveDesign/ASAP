@@ -109,9 +109,13 @@
                                             <iconify-icon icon="ion:calendar-outline"></iconify-icon>
                                             <div class="duedatelabel">Onboarded On : </div> July 01, 2025 15:20
                                         </div>
+                                         <div class="enquiryDate dueDate_container">
+                                            <iconify-icon icon="ion:calendar-outline"></iconify-icon>
+                                            <div class="duedatelabel">Scheduled On : </div> July 15, 2025 
+                                        </div>
                                         <div class="FileStatus">
                                             <div class="StatusBox">
-                                            <span id="customerStatusBadge" class="badge badge-soft-warning">Pending for Disbursement</span>
+                                            <span id="customerStatusBadge" class="badge badge-soft-success">Scheduled</span>
                                             </div>
                                                                                         <!-- <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                             <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
@@ -1200,16 +1204,16 @@
                                                     </h6>
                                                     <!-- <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p> -->
                                                 </div>
-                                                <div class="StepActions">
-                                                            <!-- <a class="ScheduleDisbuBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement</a> -->
+                                                <!-- <div class="StepActions">
+                                                            <a class="ScheduleDisbuBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement</a>
                                                             <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorAdd">
                                                                 <iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement
                                                             </a>
                                                             <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsRejectModal">
-                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject Disbursement
+                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject For Customer Consent
                                                             </a>
                                                                 
-                                                        </div>
+                                                        </div> -->
                                                 <!-- <div class="card-action-wrap">
                                                             <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
                                                             <span class="icon">
@@ -1708,7 +1712,7 @@
                 </div>
                 <div class="modal-footer">
                    <button class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-                  <a href="disbursement-scheduled.php"> <button class="btn btn-theme">Approved & Scheduled</button></a>
+                   <button class="btn btn-theme" data-bs-dismiss="modal">Approved & Scheduled</button>
                 </div>
              
             </div>

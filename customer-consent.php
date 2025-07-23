@@ -109,7 +109,7 @@
                                                                 <select class="select2">
                                                                     <option disabled selected>Select Status</option>
                                                                     <option>Waiting For Approval</option>
-                                                                    <option>Accepted</option>
+                                                                    <!-- <option>Accepted</option> -->
                                                                     <option>Rejected</option>
                                                                     <!-- <option>In Progress</option> -->
                                                                 </select>
@@ -170,7 +170,7 @@
 										<tbody>
 											<tr>
                                                 <td>
-                                                    <a href="customer-consent-view.php" class="customerID">ASAP202500001</a>
+                                                    <a href="customer-consent-view.php" class="customerID">VASAP202500001</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -184,7 +184,7 @@
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">amit.sharma@asap.in</td>
+												<td class="text-truncate">amit.sharma@VASAP.in</td>
 												<td>98765 43210</td>
 												<td><span class="badge badge-soft-warning my-1 me-2">Waiting For Approval</span></td>
 
@@ -202,7 +202,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="customer-consent-view.php" class="customerID">ASAP202500002</a>
+                                                    <a href="customer-consent-view.php" class="customerID">VASAP202500002</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -218,7 +218,7 @@
 												</td>
 												<td class="text-truncate">vijay.desai@clariesup.in</td>
 												<td>98230 11456</td>
-												<td><span class="badge badge-soft-success my-1 me-2">Accepted</span></td>
+												<td><span class="badge badge-soft-danger my-1 me-2">Rejected</span></td>
 
 												<td>20/07/2025 11:25 AM</td>
 												<td>
@@ -234,7 +234,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="customer-consent-view.php" class="customerID">ASAP202500003</a>
+                                                    <a href="customer-consent-view.php" class="customerID">VASAP202500003</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -266,7 +266,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="customer-consent-view.php" class="customerID">ASAP202500004</a>
+                                                    <a href="customer-consent-view.php" class="customerID">VASAP202500004</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -298,7 +298,7 @@
 
 											<tr>
                                                 <td>
-                                                    <a href="customer-consent-view.php" class="customerID">ASAP202500005</a>
+                                                    <a href="customer-consent-view.php" class="customerID">VASAP202500005</a>
                                                 </td>
 												<td>
 													<div class="media align-items-center">
@@ -312,7 +312,7 @@
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">deepak.nair@asap.in</td>
+												<td class="text-truncate">deepak.nair@VASAP.in</td>
 												<td>99872 33441</td>
 												<td><span class="badge badge-soft-warning my-1 me-2">Waiting For Approval</span></td>
 

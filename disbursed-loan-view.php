@@ -109,18 +109,20 @@
                                             <iconify-icon icon="ion:calendar-outline"></iconify-icon>
                                             <div class="duedatelabel">Onboarded On : </div> July 01, 2025 15:20
                                         </div>
+                                         <div class="enquiryDate dueDate_container">
+                                            <iconify-icon icon="ion:calendar-outline"></iconify-icon>
+                                            <div class="duedatelabel">Disbursed On : </div> July 20, 2025 
+                                        </div>
                                         <div class="FileStatus">
                                             <div class="StatusBox">
-                                            <span id="customerStatusBadge" class="badge badge-soft-warning">Pending for Disbursement</span>
+                                            <span id="customerStatusBadge" class="badge badge-soft-success">Disbursed</span>
                                             </div>
                                                                                         <!-- <button type="button" id="markVASAPprovedBtn" class="btn markVASAPprovedBtn d-flex align-items-center gap-2">
                                             <input type="checkbox" class="form-check-input m-0" id="approvalCheckbox" />
                                             <span>Mark as Approved</span>
                                         </button> -->
-                                            <!-- <a href="#" id="CreditApproveBTn" class="AssessmentBTn"
-                                                data-bs-toggle="modal" data-bs-target="#AssessmentComplete">
-                                                <iconify-icon icon="carbon:task-complete"></iconify-icon> Complete
-                                                Credit Assessment
+                                           <!-- <a href="#" id="CreditApproveBTn" class="AssessmentBTn" data-bs-toggle="modal" data-bs-target="#DisburseConfirmModal">
+                                            <iconify-icon icon="solar:hand-money-linear"></iconify-icon> Disburse Now
                                             </a> -->
                                         </div>
 
@@ -154,7 +156,7 @@
                                     <!-- <div class="subtext"> <div class="status">Verified</div> 16 July,2025</div> -->
                                     </div>
                                     <div class="tab" data-tab="panel2">
-                                    <div class="step-title"> Customer Consent Details</div>
+                                    <div class="step-title"> Customer Loan Details & EMI Card</div>
                                     </div>
                                 </div>
 
@@ -1195,21 +1197,21 @@
                                        <section class="CustomerInformation">
                                             <div class="TabInnerHead">
                                                 <div class="HeadCnt">
-                                                    <h6> Customer Consent Details
-                                                        <div class="subtext"> <div class="status-success">Accepted</div> 16 July,2025</div>
+                                                    <h6> Customer Loan Details
+                                                        <!-- <div class="subtext"> <div class="status-success">Disbursed</div> 20 July,2025</div> -->
                                                     </h6>
                                                     <!-- <p>Review the provided information for the co-applicant or guarantor to ensure accuracy before proceeding.</p> -->
                                                 </div>
-                                                <div class="StepActions">
-                                                            <!-- <a class="ScheduleDisbuBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement</a> -->
+                                                <!-- <div class="StepActions">
+                                                            <a class="ScheduleDisbuBtn" data-bs-toggle="modal" data-bs-target="#GurantorAdd"><iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement</a>
                                                             <a class="stepActionBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorAdd">
                                                                 <iconify-icon icon="solar:calendar-linear"></iconify-icon> Schedule Disbursement
                                                             </a>
                                                             <a class="stepActionBtn rejectBtn" href="#" data-bs-toggle="modal" data-bs-target="#GurantorDetailsRejectModal">
-                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject Disbursement
+                                                                <iconify-icon icon="radix-icons:cross-circled"></iconify-icon> Reject For Customer Consent
                                                             </a>
                                                                 
-                                                        </div>
+                                                        </div> -->
                                                 <!-- <div class="card-action-wrap">
                                                             <a class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover dropdown-toggle no-caret" href="#" data-bs-toggle="dropdown">
                                                             <span class="icon">
@@ -1231,6 +1233,9 @@
                                             </div>
 
                                             <div class="row">
+                                                <!-- <div class="col-lg-4">
+
+                                                </div> -->
                                                 <div class="col-lg-6">
                                                     <div class="CustomCard">
                                                         <!-- <div class="CustomCardHeader">
@@ -1239,7 +1244,10 @@
                                                         </div> -->
                                                         <div class="CustomCardBody">
                                                             <div class="ReportData_fields">
-
+                                                                <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Loan ID</div>
+                                                                    <div class="userenuData">LN20250001</div>
+                                                                </div>
                                                                 <div class="cu-task-fields__row">
                                                                     <div class="cu-task-label-icon__container">ROI Type</div>
                                                                     <div class="userenuData">Reducing ROI</div>
@@ -1284,6 +1292,14 @@
                                                                 <div class="cu-task-fields__row">
                                                                     <div class="cu-task-label-icon__container">Net Disbursement Amount</div>
                                                                     <div class="userenuData">₹480,767</div>
+                                                                </div>
+                                                                    <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Payble Amount</div>
+                                                                    <div class="userenuData">₹6417491</div>
+                                                                </div>
+                                                                  <div class="cu-task-fields__row">
+                                                                    <div class="cu-task-label-icon__container">Outstanding Amount</div>
+                                                                    <div class="userenuData">₹5,000,000.00</div>
                                                                 </div>
                                                                  <div class="cu-task-fields__row">
                                                                     <div class="cu-task-label-icon__container">Include PF/Insurance Fee</div>
@@ -1433,291 +1449,61 @@
         </div>
 
 
- <!------------------------------------------------------
-  Assessment Modern Modal style 1 Code Here Start Here
----------------------------------------------------------->
+ 
 
-        <div class="ModalAddGurantor">
-            <div class="modal fade" id="AssessmentComplete" tabindex="-1" aria-labelledby="KYCverifyModal"
-                aria-hidden="true">
-                <div class="modal-dialog  modal-dialog-centered">
-                    <div class="modal-content rounded-7 shadow">
-                        <div class="modal-header CustomModal">
-                            <h5 class="ModalTitle">
-                                <div class="IconBox">
-                                    <iconify-icon icon="hugeicons:ai-user"></iconify-icon>
+<!-- =============================================================
+     Disbursement Confirmation Modal (Bootstrap 5)
+     ============================================================= -->
+<div class="modernModalWrapper">
+  <div class="modal fade" id="DisburseConfirmModal" tabindex="-1" aria-labelledby="DisburseConfirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-7 shadow">
 
-                                </div>
-                                <div class="TitleVox">
-                                    Complete Credit Assessment
-                                    <span>Provide details for credit evaluation.</span>
-                                </div>
-
-
-                            </h5>
-
-                            <button type="button" class="btnClose btn btn-sm btn-bg-transparent"
-                                data-bs-dismiss="modal">
-                                <iconify-icon icon="oui:cross"></iconify-icon>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Category</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select</option>
-                                            <option value="1">Business Loan</option>
-                                            <option value="2">Personal loan</option>
-                                            <option value="3">Raw Material Financing</option>
-                                            <option value="8">Outstanding Loan</option>
-                                            <option value="9">LRD</option>
-                                            <option value="10">EPVI</option>
-                                            <option value="11">Raw Material Financing - Platina</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Product Name</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select</option>
-                                            <option value="1">Secured</option>
-                                            <option value="2">Unsecured</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">ROI Type</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select</option>
-                                            <option value="reducing_roi" class="all_loan_type" style="">Reducing ROI
-                                            </option>
-                                            <option value="fixed_interest_roi" class="all_loan_type new_loan_type"
-                                                style="">Fixed Interest ROI</option>
-                                            <option value="quaterly_interest" class="all_loan_type new_loan_type"
-                                                style="">Quarterly Interest</option>
-                                            <option value="bullet_repayment" class="all_loan_type" style="">Bullet
-                                                Repayment</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Tenure</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select</option>
-                                            <option value="127">1 Month</option>
-                                            <option value="12">2 Months</option>
-                                            <option value="13">3 Months</option>
-                                            <option value="14">4 Months</option>
-                                            <option value="15">5 Months</option>
-                                            <option value="16">6 Months</option>
-                                            <option value="17">7 Months</option>
-                                            <option value="18">8 Months</option>
-                                            <option value="19">9 Months</option>
-                                            <option value="20">10 Months</option>
-                                            <option value="21">11 Months</option>
-                                            <option value="5">12 Months</option>
-                                            <option value="22">13 Months</option>
-                                            <option value="23">14 Months</option>
-                                            <option value="24">15 Months</option>
-                                            <option value="102">16 Months</option>
-                                            <option value="103">17 Months</option>
-                                            <option value="38">18 Months</option>
-                                            <option value="104">19 Months</option>
-                                            <option value="105">20 Months</option>
-                                            <option value="106">21 Months</option>
-                                            <option value="107">22 Months</option>
-                                            <option value="108">23 Months</option>
-                                            <option value="44">24 Months</option>
-                                            <option value="109">25 Months</option>
-                                            <option value="110">26 Months</option>
-                                            <option value="111">27 Months</option>
-                                            <option value="112">28 Months</option>
-                                            <option value="113">29 Months</option>
-                                            <option value="114">30 Months</option>
-                                            <option value="115">31 Months</option>
-                                            <option value="116">32 Months</option>
-                                            <option value="117">33 Months</option>
-                                            <option value="118">34 Months</option>
-                                            <option value="119">35 Months</option>
-                                            <option value="11">36 Month</option>
-                                            <option value="120">37 Months</option>
-                                            <option value="121">38 Months</option>
-                                            <option value="122">39 Months</option>
-                                            <option value="123">40 Months</option>
-                                            <option value="130">41 Months</option>
-                                            <option value="131">42 Months</option>
-                                            <option value="132">43 Months</option>
-                                            <option value="133">44 Months</option>
-                                            <option value="134">45 Months</option>
-                                            <option value="135">46 Months</option>
-                                            <option value="136">47 Months</option>
-                                            <option value="137">48 Months</option>
-                                            <option value="138">49 Months</option>
-                                            <option value="139">50 Months</option>
-                                            <option value="140">51 Months</option>
-                                            <option value="141">52 Months</option>
-                                            <option value="142">53 Months</option>
-                                            <option value="143">54 Months</option>
-                                            <option value="144">55 Months</option>
-                                            <option value="145">56 Months</option>
-                                            <option value="146">57 Months</option>
-                                            <option value="147">58 Months</option>
-                                            <option value="148">59 Months</option>
-                                            <option value="149">60 Months</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Loan Amount </label>
-                                        <input type="text" class="form-control" placeholder="Enter Loan Amount">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">ROI(%)</label>
-                                        <input type="text" class="form-control" placeholder="Enter ROI %">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Plateform Fee</label>
-                                        <input type="number" class="form-control" placeholder="Enter Plateform Fee">
-                                     
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Insurance Fee </label>
-                                        <input type="number" class="form-control" placeholder="Enter Plateform Fee">
-                                     
-                                    </div>
-                                </div>
-                                
-
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn btn-theme" id="sendConsentBtn">
-                            Save & Send to Customer Consent
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-             </div>
-      <!------------------------------------------------------
-  Assessment Modern Modal style 1 Code Here Start Here
----------------------------------------------------------->
-
-<!----------------------------------------------------------------------------
-  Add Co-Applicant/Gurantor Detail Modern Modal style 1 Code Here Start Here
---------------------------------------------------------------------------->
-   
-   <div class="ModalAddGurantor">
-        <div class="modal fade" id="GurantorAdd" tabindex="-1" aria-labelledby="KYCverifyModal" aria-hidden="true">
-            <div class="modal-dialog  modal-dialog-centered">
-                <div class="modal-content rounded-7 shadow">
-                    <div class="modal-header CustomModal">
-                        <h5 class="ModalTitle">
-                            <div class="IconBox">
-                                <iconify-icon icon="hugeicons:ai-user"></iconify-icon>
-                            
-                            </div>
-                            <div class="TitleVox">
-                              Schedule Disbursement
-                            <span>Select disbursement date.</span>
-                            </div>
-                        
-
-                        </h5>
-                       
-                        <button type="button" class="btnClose btn btn-sm btn-bg-transparent" data-bs-dismiss="modal">
-                            <iconify-icon icon="oui:cross"></iconify-icon>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">Disburse Date </label>
-                                <input type="text" class="form-control  Ndatepicker" placeholder="Enter full name">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 mb-2">
-                            <div class="CustomCard">
-                                                        <!-- <div class="CustomCardHeader">
-                                                            <h6 class="CustomCardTitle">1. Co-Applicant / Guarantor Details</h6>
-                                                       
-                                                        </div> -->
-                                                        <div class="CustomCardBody">
-                                                            <div class="ReportData_fields BussinessRepport">
-                                                               <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Product Name</div>
-                                                                    <div class="userenuData">Business Loan / Unsecured</div>
-                                                                </div>
-                                                                <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Approved Tenure </div>
-                                                                    <div class="userenuData">36 Month</div>
-                                                                </div>
-                                                                <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Approved Amount Amount</div>
-                                                                    <div class="userenuData">₹500000</div>
-                                                                </div>
-                                                                <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">ROI Type</div>
-                                                                    <div class="userenuData">Reducing ROI</div>
-                                                                </div>
-                                                                <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Product ROI </div>
-                                                                    <div class="userenuData">18%</div>
-                                                                </div>
-
-                                                                <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Net Disbursement Amount</div>
-                                                                    <div class="userenuData">₹480,767</div>
-                                                                </div>
-                                                                 <div class="cu-task-fields__row">
-                                                                    <div class="cu-task-label-icon__container">Is Interest Already Paid</div>
-                                                                    <div class="userenuData">No</div>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                        </div>
-
-
-                        
-                        
-                     </div>
-                    
-                </div>
-                <div class="modal-footer">
-                   <button class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-                  <a href="disbursement-scheduled.php"> <button class="btn btn-theme">Approved & Scheduled</button></a>
-                </div>
-             
-            </div>
+        <!-- Modal Header -->
+        <div class="ModalHead">
+          <h5 id="DisburseConfirmModalLabel" class="fw-semibold mb-0 d-flex align-items-center gap-2">
+            <iconify-icon icon="fluent:warning-28-regular"></iconify-icon>
+            Loan Disbursement Confirmation
+          </h5>
+          <button type="button" class="btnClose btn btn-sm btn-bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+            <iconify-icon icon="oui:cross"></iconify-icon>
+          </button>
         </div>
-    </div>
-<!----------------------------------------------------------------------------
-  Add Co-Applicant/Gurantor Detail Modern Modal style 1 Code Here End Here
---------------------------------------------------------------------------->
 
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="ContentWrapper">
+            <h4 class="mb-3">Are you sure?</h4>
+            <p class="mb-0">
+              You are about to disburse the loan for 
+              <strong id="DisburseCustomerName">Atul Sharma</strong>.
+            </p>
+            <ul class="LoanPoints">
+              <li>All underwriting checks have been completed.</li>
+              <li>Funding amount and account details are correct.</li>
+              <li>This action will mark the loan as <em>disbursed</em> and move it to the active loan portfolio.</li>
+            </ul>
+
+            <!-- Footer Buttons -->
+            <div class="FooterActionStyle1 ">
+              <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" id="confirmDisburseBtn" class="btn btn-theme">Yes, Disburse</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional Footer Branding -->
+        <div class="silverrightloog ">
+          <img src="dist/img/newimages/silverlogo.png" alt="logo" >
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- =============================================================
+     Disbursement Confirmation Modal (Bootstrap 5) END
+     ============================================================= -->
             <!-- /Page Body End-->
             <?php include('footer.php') ?>
 
@@ -2151,32 +1937,69 @@
   });
 </script>
 
-<link href="dist/customplugins/datepicker-new/datepicker.min.css" rel="stylesheet" />
-    <script src="dist/customplugins/datepicker-new/scripts.min.js"></script>
-    <!-- .end calendar includes -->
 
-     <!-- Date Time Picker -->
-    <script type="text/javascript">
-        $(".Ndatepicker").calendar({
-            singleDate: true,
-            calendarCount: 1,
-            showHeader: false,
-            showFooter: false,
-            autoCloseOnSelect: true,
-            showTimePickers: false,
-            format: "DD/MM/YYYY",
-            onSelect: function(date) {
-                // Get the selected date
-                const selectedDate = new Date(date);
-                
-                // Update individual components
-                document.getElementById('display-date').textContent = selectedDate.getDate();
-                document.getElementById('display-month-year').textContent = 
-                    selectedDate.toLocaleString('default', { month: 'short' }) + ' ' + selectedDate.getFullYear();
-                document.getElementById('display-day').textContent = 
-                    selectedDate.toLocaleString('default', { weekday: 'long' });
-                
-            }
-        });
-    </script>
- 
+ <!-- =============================================================
+     JS: Wire up dynamic text + redirect on confirm
+     ============================================================= -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var trigger = document.getElementById('CreditApproveBTn');
+    var confirmBtn = document.getElementById('confirmDisburseBtn');
+    var nameSpan = document.getElementById('DisburseCustomerName');
+
+    // function to compute redirect URL
+    function buildRedirectUrl(triggerEl) {
+      var base = 'disbursed-loan.php';
+      var loanId = triggerEl?.dataset?.loanId;
+      // If you prefer POST, you can change this logic (see alt below).
+      if (loanId) {
+        var url = new URL(base, window.location.origin);
+        url.searchParams.set('loan_id', loanId);
+        return url.toString();
+      }
+      return base; // fallback
+    }
+
+    // When the Disburse button is clicked, hydrate the modal with contextual data
+    if (trigger) {
+      trigger.addEventListener('click', function (e) {
+            // Stash redirect URL on the confirm button
+        if (confirmBtn) {
+          confirmBtn.dataset.redirect = buildRedirectUrl(this);
+        }
+      });
+    }
+
+    // Handle confirm click -> redirect
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', function () {
+        var redirectUrl = this.dataset.redirect || 'disbursed-loan.php';
+        window.location.href = redirectUrl;
+      });
+    }
+  });
+</script>
+
+<!-- =============================================================
+     OPTIONAL: If you want to POST instead of GET redirect
+     Uncomment and adapt below.
+     ============================================================= -->
+<!--
+<script>
+  function postDisburse(loanId) {
+    var form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'disbursed-loan.php';
+
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'loan_id';
+    input.value = loanId || '';
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+  }
+  // In the confirm click handler, call: postDisburse(trigger.dataset.loanId)
+</script>
+-->
