@@ -1,3 +1,18 @@
+	<!-- Page Footer -->
+	<div class="hk-footer">
+		<footer class="container-xxl footer">
+			<div class="row">
+				<div class="col-xl-12">
+					<p class="footer-text"><span class="copy-text">VASAP © 2025 All rights reserved.</span></p>
+				</div>
+				
+			</div>
+		</footer>
+	</div>
+	<!-- / Page Footer -->
+
+</div>
+<!-- /Main Content -->
 </div>
 	<!-- /Wrapper -->
 
@@ -59,7 +74,14 @@
     <!-- dynamic page header title and breadcrums js -->
     <script src="dist/js/page-header-init.js"></script>
 
+     <!-- Datetimepicker JS -->
+	<!-- <script src="dist/customplugins/date-time-range/bootstrap-datetimepicker.min.js" type=""></script> -->
 
+	<!-- Daterangepikcer JS -->
+	<!-- <script src="dist/customplugins/date-time-range/daterangepicker/daterangepicker.js" type=""></script> -->
+
+	<!-- Custom JS -->
+	<script src="dist/customplugins/date-time-range/script.js" type=""></script>
 
 	<!-- daily application chart js -->
 	<script>
@@ -153,6 +175,7 @@
 
 
 	<!-- loan graph chart -->
+
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const chartEl = document.querySelector("#creditChart");
@@ -209,9 +232,138 @@
 					chart.updateSeries(newSeries);
 				});
 			});
+			//  Restore full chart on outside click
+			window.addEventListener('click', function (e) {
+				const isLegend = e.target.closest('.legend-item');
+				const isChart = e.target.closest('#creditChart');
+
+				if (!isLegend && !isChart) {
+					chart.updateSeries(chartData[currentRange]);
+				}
+			});
 		});
 	</script>
 
+
+
+<!-- Cibil Report Graph js -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const chartEl = document.querySelector("#creditChart2");
+      const score = 781;
+
+      const scoreRanges = [
+        { label: 'Poor', value: 279, color: '#e52228' },
+        { label: 'Fair', value: 89, color: '#f3931b' },
+        { label: 'Good', value: 70, color: '#facc15' },
+        { label: 'Very Good', value: 60, color: '#4ade80' },
+        { label: 'Excellent', value: 100, color: '#22c55e' },
+      ];
+
+      const boundaries = [300, 580, 670, 740, 800, 900];
+      const current = boundaries.findIndex(b => score < b) - 1;
+      const scoreGrade = document.getElementById('scoreGrade');
+      const scoreValue = document.getElementById('scoreValue');
+
+      if (scoreRanges[current]) {
+        scoreGrade.textContent = scoreRanges[current].label;
+        scoreGrade.style.color = scoreRanges[current].color;
+      }
+
+      const chartOptions = {
+        chart: {
+          type: 'donut',
+          height: 300
+        },
+        labels: scoreRanges.map(r => r.label),
+        series: scoreRanges.map(r => r.value),
+        colors: scoreRanges.map(r => r.color),
+        dataLabels: {
+          enabled: false
+        },
+        legend: {
+          show: false
+        },
+        tooltip: {
+          y: {
+            formatter: function (val, opts) {
+              const range = scoreRanges[opts.seriesIndex];
+              return `${range.label} (${boundaries[opts.seriesIndex]} - ${boundaries[opts.seriesIndex + 1] - 1})`;
+            }
+          }
+        },
+        plotOptions: {
+          pie: {
+            startAngle: -120,
+            endAngle: 120,
+            donut: {
+              size: '70%'
+            },
+            customScale: 1.1,
+            offsetY: 10
+          }
+        },
+        stroke: {
+          width: 0
+        }
+      };
+
+      const chart = new ApexCharts(chartEl, chartOptions);
+      chart.render();
+    });
+  </script>
+
+<script>
+	// Wait for full page load (including images, scripts, etc.)
+window.addEventListener("load", function () {
+  const loader = document.getElementById("page-loader");
+  const content = document.getElementById("main-content");
+
+  loader.style.display = "none";
+  content.style.display = "block";
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".dashsidebarWrapper");
+    if (!sidebar) return;
+
+    const currentUrl = window.location.pathname.split("/").pop();
+
+    // Scoped nav links
+    const navLinks = sidebar.querySelectorAll(".nav-link[href]:not([href='javascript:void(0);'])");
+
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute("href").split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+
+        const parentCollapse = link.closest(".collapse");
+        if (parentCollapse) {
+          parentCollapse.classList.add("show");
+
+          const parentToggle = parentCollapse.previousElementSibling;
+          if (parentToggle && parentToggle.classList.contains("nav-link")) {
+            parentToggle.classList.add("active");
+          }
+
+          const parentNavItem = parentCollapse.closest(".nav-item");
+          if (parentNavItem) {
+            parentNavItem.classList.add("active");
+          }
+        } else {
+          const parentLi = link.closest(".nav-item");
+          if (parentLi) {
+            parentLi.classList.add("active");
+          }
+        }
+      }
+    });
+  });
+</script>
 
 
 	

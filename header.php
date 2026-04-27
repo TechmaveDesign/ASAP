@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASAP Finance - Super admin Dashboard</title>
-    <meta name="description" content="ASAP Finance - Super admin Dashboard" />
+    <title>VASAP Finance - Super admin Dashboard</title>
+    <meta name="description" content="VASAP Finance - Super admin Dashboard" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="dist/img/newimages/bgaimage.png">
@@ -27,12 +27,20 @@
     <link href="vendors/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
         type="text/css" />
 
+     <!-- Datetimepicker CSS -->
+    <!-- <link rel="stylesheet" href="dist/customplugins/date-time-range/bootstrap-datetimepicker.min.css"> -->
+
+    <!-- Daterangepikcer CSS -->
+    <!-- <link rel="stylesheet" href="dist/customplugins/date-time-range/daterangepicker.css"> -->
     <!-- CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="dist/css/custom.css">
 </head>
 
 <body>
+      <div id="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
     <!-- Wrapper -->
     <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
         <!-- Top Navbar -->
@@ -56,6 +64,131 @@
                         </nav>
                     </div>
 
+                    <!-- Search -->
+				<form class="dropdown navbar-search">
+					<div class="dropdown-toggle no-caret" data-bs-toggle="dropdown" data-dropdown-animation data-bs-auto-close="outside">
+						<a href="#" class="btn btn-icon btn-rounded btn-flush-dark flush-soft-hover  d-xl-none"><span class="icon"><span class="feather-icon"><i data-feather="search"></i></span></span></a>
+						<div class="input-group d-xl-flex d-none">
+							<span class="input-affix-wrapper input-search affix-border">
+								<input type="text" class="form-control  bg-transparent"  data-navbar-search-close="false" placeholder="Search..." aria-label="Search">
+								<span class="input-suffix"><span>/</span>
+									<span class="btn-input-clear"><i class="bi bi-x-circle-fill"></i></span>
+									<span class="spinner-border spinner-border-sm input-loader text-primary" role="status">
+										<span class="sr-only">Loading...</span>
+									</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div  class="dropdown-menu p-0">
+						<!-- Mobile Search -->
+						<div class="dropdown-item d-xl-none bg-transparent">
+							<div class="input-group mobile-search">
+								<span class="input-affix-wrapper input-search">
+									<input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+									<span class="input-suffix">
+										<span class="btn-input-clear"><i class="bi bi-x-circle-fill"></i></span>
+										<span class="spinner-border spinner-border-sm input-loader text-primary" role="status">
+											<span class="sr-only">Loading...</span>
+										</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<!--/ Mobile Search -->
+						<div data-simplebar class="dropdown-body p-2">
+							<h6 class="dropdown-header">Recent Search
+							</h6>
+							<div class="dropdown-item bg-transparent">
+								<a href="#" class="badge badge-pill badge-soft-secondary">Grunt</a>
+								<a href="#" class="badge badge-pill badge-soft-secondary">Node JS</a>
+								<a href="#" class="badge badge-pill badge-soft-secondary">SCSS</a>
+							</div>
+							<div class="dropdown-divider"></div>
+							<h6 class="dropdown-header">Help
+							</h6>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<div class="media align-items-center">
+									<div class="media-head me-2">
+										<div class="avatar avatar-icon avatar-xs avatar-soft-light avatar-rounded">
+											<span class="initial-wrap">
+												<span class="svg-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-corner-down-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+														<path d="M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4"></path>
+													 </svg>
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="media-body">
+										How to setup theme?
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<div class="media align-items-center">
+									<div class="media-head me-2">
+										<div class="avatar avatar-icon avatar-xs avatar-soft-light avatar-rounded">
+											<span class="initial-wrap">
+												<span class="svg-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-corner-down-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+														<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+														<path d="M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4"></path>
+													 </svg>
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="media-body">
+										View detail documentation
+									</div>
+								</div>
+							</a>
+							<div class="dropdown-divider"></div>
+							<h6 class="dropdown-header">Users
+							</h6>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<div class="media align-items-center">
+									<div class="media-head me-2">
+										<div class="avatar avatar-xs avatar-rounded">
+											<img src="dist/img/avatar3.jpg" alt="user" class="avatar-img">
+										</div>
+									</div>
+									<div class="media-body">
+										Sarah Jone
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<div class="media align-items-center">
+									<div class="media-head me-2">
+										<div class="avatar avatar-xs avatar-soft-primary avatar-rounded">
+											<span class="initial-wrap">J</span>
+										</div>
+									</div>
+									<div class="media-body">
+										Joe Jackson
+									</div>
+								</div>
+							</a>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<div class="media align-items-center">
+									<div class="media-head me-2">
+										<div class="avatar avatar-xs avatar-rounded">
+											<img src="dist/img/avatar4.jpg" alt="user" class="avatar-img">
+										</div>
+									</div>
+									<div class="media-body">
+										Maria Richard
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="dropdown-footer d-xl-flex d-none"><a href="#"><u>Search all</u></a></div>
+					</div>
+				</form>
+				<!-- /Search -->
                     <!-- /Page Header -->
                 </div>
                 <!-- /Start Nav -->
@@ -133,7 +266,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div>
-                                                        <div class="notifications-text">You have a follow up with ASAP
+                                                        <div class="notifications-text">You have a follow up with VASAP
                                                             Head on Friday, Dec 19 at 9:30 am</div>
                                                         <div class="notifications-info">
                                                             <div class="notifications-time">Yesterday, 9:25 PM</div>
@@ -213,7 +346,7 @@
                                     data-bs-toggle="dropdown" data-dropdown-animation data-bs-auto-close="outside"
                                     aria-expanded="false">
                                     <div class="avatar avatar-rounded avatar-xs">
-                                        <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img">
+                                        <img src="dist/img/newimages/indian-users/user-in4.png" alt="user" class="avatar-img">
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end profiledropdown">
@@ -221,17 +354,17 @@
                                         <div class="media">
                                             <div class="media-head me-2">
                                                 <div class="avatar avatar-primary avatar-sm avatar-rounded">
-                                                    <span class="initial-wrap">SA</span>
+                                                    <span class="initial-wrap">RM</span>
                                                 </div>
                                             </div>
                                             <div class="media-body">
                                                 <div class="dropdown">
-                                                    <a href="#" class="d-block  link-dark fw-medium">Super Admin</a>
+                                                    <a href="#" class="d-block  link-dark fw-medium">Rahul Mehta</a>
 
                                                 </div>
-                                                <div class="fs-7">superadmin@gmail.com</div>
-                                                <a href="login.php" class="d-block fs-8 link-secondary"><u>Sign
-                                                        Out</u></a>
+                                                <div class="fs-7">Super Admin</div>
+                                                <!-- <a href="#" class="d-block fs-8 link-secondary"><u>Sign
+                                                        Out</u></a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -241,9 +374,12 @@
                                     <a class="dropdown-item" href="##">
                                         <iconify-icon icon="solar:user-linear"></iconify-icon> Profile
                                     </a>
-                                    <a class="dropdown-item" href="#">
-                                        <iconify-icon icon="solar:settings-linear"></iconify-icon>Settings</span>
+                                     <a class="dropdown-item" href="#">
+                                        <iconify-icon icon="solar:logout-outline"></iconify-icon> Sign Out</span>
                                     </a>
+                                    <!-- <a class="dropdown-item" href="#">
+                                        <iconify-icon icon="solar:settings-linear"></iconify-icon>Settings</span>
+                                    </a> -->
 
                                 </div>
                             </div>
@@ -291,11 +427,12 @@
                 <div class="menu-content-wrap">
                     <div class="menu-group">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="index.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/dashboard.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/dashboard.png" alt=""> -->
+                                             <iconify-icon icon="mynaui:home"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Dashboard</span>
@@ -309,14 +446,39 @@
                             <span>User Management</span>
                         </div>
                         <ul class="navbar-nav flex-column">
+                          <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
+                                    data-bs-target="#dash_scrumboardd">
+                                    <span class="nav-icon-wrap position-relative">
 
+                                        <span class="svg-icon">
+                                             <!-- <img src="dist/img/newimages/icons/riskrules.png" alt=""> -->
+                                            <iconify-icon icon="octicon:shield-lock-24"></iconify-icon>
+                                        </span>
+                                    </span>
+                                    <span class="nav-link-text">User Permission </span>
+                                </a>
+                                <ul id="dash_scrumboardd" class="nav flex-column collapse  nav-children">
+                                    <li class="nav-item">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="user-management.php"><span class="nav-link-text">User Manage</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="roles-permission.php"><span class="nav-link-text">Roles & Permission</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
                                     data-bs-target="#dash_scrumboard">
                                     <span class="nav-icon-wrap position-relative">
 
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/profile.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/profile.png" alt=""> -->
+                                            <iconify-icon icon="solar:user-linear"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Customers Management </span>
@@ -325,17 +487,17 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">New
+                                                <a class="nav-link" href="customer-new.php"><span class="nav-link-text">New
                                                         Customers</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">All
+                                                <a class="nav-link" href="customer-all.php"><span class="nav-link-text">All
                                                         Customers</span></a>
                                             </li>
-                                            <li class="nav-item">
+                                            <!-- <li class="nav-item">
                                                 <a class="nav-link" href="##"><span class="nav-link-text">Auto Rejected
                                                         Customers</span></a>
-                                            </li>
+                                            </li> -->
 
                                         </ul>
                                     </li>
@@ -347,7 +509,8 @@
                                     <span class="nav-icon-wrap position-relative">
 
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/kyc.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/kyc.png" alt=""> -->
+                                            <iconify-icon icon="material-symbols-light:document-search-outline"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">KYC & Business Management </span>
@@ -356,11 +519,11 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Approved
+                                                <a class="nav-link" href="customer-approved.php"><span class="nav-link-text">Approved
                                                         Customers</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Rejected
+                                                <a class="nav-link" href="customer-rejected.php"><span class="nav-link-text">Rejected
                                                         Customers</span></a>
                                             </li>
 
@@ -370,16 +533,17 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="credit-assessment.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/Credit-Assessment-Status.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/Credit-Assessment-Status.png" alt=""> -->
+                                             <iconify-icon icon="fluent:document-queue-20-regular"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Credit Assessment Status</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="index2.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
@@ -388,22 +552,24 @@
                                     </span>
                                     <span class="nav-link-text">Final Credit Assessment Status</span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="customer-consent.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/customer-consent.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/customer-consent.png" alt=""> -->
+                                             <iconify-icon icon="carbon:document-set"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Customer Consent</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index2.php">
+                                <a class="nav-link" href="disbursement-approval.php">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/borrowicon.png" alt="">
+                                            <iconify-icon icon="mynaui:rupee-square"></iconify-icon>
+                                            <!-- <img src="dist/img/newimages/icons/borrowicon.png" alt=""> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Disbursement Approval</span>
@@ -416,7 +582,8 @@
                                     <span class="nav-icon-wrap position-relative">
 
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/loan-applications.png" alt="">
+                                            <iconify-icon icon="hugeicons:file-management"></iconify-icon>
+                                            <!-- <img src="dist/img/newimages/icons/loan-applications.png" alt=""> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Manage Disbursement </span>
@@ -425,26 +592,23 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Scheduled
+                                                <a class="nav-link" href="disbursement-scheduled.php"><span class="nav-link-text">Scheduled
                                                         Disbursement</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Today
+                                                <a class="nav-link" href="disbursement-today.php"><span class="nav-link-text">Today
                                                         Disbursement</span></a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Pending
-                                                        Disbursement</span></a>
+                                                <a class="nav-link" href="disbursed-due.php"><span class="nav-link-text">Due Disbursement</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text"> Disbursed
-                                                        Loan</span></a>
+                                                <a class="nav-link" href="disbursed-loans.php"><span class="nav-link-text"> Disbursed Loan</span></a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text"> Audit
-                                                        Trails</span></a>
-                                            </li>
+                                            <!-- <li class="nav-item">
+                                                <a class="nav-link" href="##"><span class="nav-link-text"> Audit Trails</span></a>
+                                            </li> -->
 
                                         </ul>
                                     </li>
@@ -457,7 +621,8 @@
                                     <span class="nav-icon-wrap position-relative">
 
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/repayments.png" alt="">
+                                            <iconify-icon icon="fluent:form-multiple-collection-24-regular"></iconify-icon>
+                                            <!-- <img src="dist/img/newimages/icons/repayments.png" alt=""> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Manage Collections </span>
@@ -466,24 +631,24 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Customer's
+                                                <a class="nav-link" href="emi-all-customer.php"><span class="nav-link-text">Customer's
                                                         EMI</span></a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Today's
+                                                <a class="nav-link" href="emi-pending.php"><span class="nav-link-text">Today's
                                                         Pending EMI</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Today's
+                                                <a class="nav-link" href="emi-received.php"><span class="nav-link-text">Today's
                                                         Received EMI</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text"> Over Due
+                                                <a class="nav-link" href="emi-overdue.php"><span class="nav-link-text"> Over Due
                                                         EMI</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Closed Loan
+                                                <a class="nav-link" href="closed-loan.php"><span class="nav-link-text">Closed Loan
                                                         (NOC)</span></a>
                                             </li>
 
@@ -498,7 +663,8 @@
                                     <span class="nav-icon-wrap position-relative">
 
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/loanproducts.png" alt="">
+                                            <!-- <img src="dist/img/newimages/icons/loanproducts.png" alt=""> -->
+                                             <iconify-icon icon="fluent-mdl2:product"></iconify-icon>
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Loan Products</span>
@@ -507,30 +673,55 @@
                                     <li class="nav-item">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Manage
+                                                <a class="nav-link" href="product-category.php"><span class="nav-link-text">Manage
                                                         Categories</span></a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Manage
+                                                <a class="nav-link" href="products.php"><span class="nav-link-text">Manage
                                                         Products</span></a>
                                             </li>
-                                            <li class="nav-item">
+                                            <!-- <li class="nav-item">
                                                 <a class="nav-link" href="##"><span class="nav-link-text">Manage
                                                         Tenures</span></a>
-                                            </li>
+                                            </li> -->
 
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
 
+                            
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="system-activity.php">
+                                    <span class="nav-icon-wrap">
+                                        <span class="svg-icon">
+                                            <!-- <img src="dist/img/newimages/icons/auditlogs.png" alt=""> -->
+                                             <iconify-icon icon="carbon:user-activity"></iconify-icon>
+                                        </span>
+                                    </span>
+                                    <span class="nav-link-text">System Activity Logs</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="support-tickets.php">
+                                    <span class="nav-icon-wrap">
+                                        <span class="svg-icon">
+                                            <!-- <img src="dist/img/newimages/icons/support-help.png" alt=""> -->
+                                             <iconify-icon icon="hugeicons:customer-support"></iconify-icon>
+                                        </span>
+                                    </span>
+                                    <span class="nav-link-text">Support</span>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
                                     data-bs-target="#dash_reports">
                                     <span class="nav-icon-wrap">
                                         <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/reports.png" alt="">
+                                            <iconify-icon icon="oui:nav-reports"></iconify-icon>
+                                            <!-- <img src="dist/img/newimages/icons/reports.png" alt=""> -->
                                         </span>
                                     </span>
                                     <span class="nav-link-text">Reports & Analytics</span>
@@ -554,17 +745,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="##">
-                                    <span class="nav-icon-wrap">
-                                        <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/auditlogs.png" alt="">
-                                        </span>
-                                    </span>
-                                    <span class="nav-link-text">System Activity Logs</span>
-                                </a>
-                            </li>
                             <!-- 
                             <li class="nav-item">
                                 <a class="nav-link" href="##">
@@ -578,7 +758,7 @@
                                 </a>
                             </li> -->
 
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
                                     data-bs-target="#dash_settings">
                                     <span class="nav-icon-wrap">
@@ -610,37 +790,8 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse"
-                                    data-bs-target="#dash_Compliance">
-                                    <span class="nav-icon-wrap">
-                                        <span class="svg-icon">
-                                            <img src="dist/img/newimages/icons/Compliance.png" alt="">
-                                        </span>
-                                    </span>
-                                    <span class="nav-link-text">Compliance & Legal</span>
-                                </a>
-                                <ul id="dash_Compliance" class="nav flex-column collapse nav-children">
-                                    <li class="nav-item">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span
-                                                        class="nav-link-text">RBI Guidelines</span></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span class="nav-link-text">Consent Forms</span></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="##"><span
-                                                        class="nav-link-text">Legal Notice Module</span></a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </li>
-                                </ul>
                             </li> -->
-
+                          
                         </ul>
                     </div>
 
@@ -656,11 +807,11 @@
                                 <div class="media">
                                 <div class="media-head me-2">
                                     <div class="avatar avatar-xs avatar-rounded">
-                                        <img src="dist/img/avatar10.jpg" alt="user" class="avatar-img">
+                                        <img src="dist/img/newimages/indian-users/user-in4.png" alt="user" class="avatar-img">
                                     </div>
                                 </div>
                                 <div class="adminuserLog">
-                                   <h2 class="AdminUsername">Morgan Freeman</h2>
+                                   <h2 class="AdminUsername">Rahul Mehta</h2>
                                     <div class="userrole">super admin</div>
                                 </div>
                             </div>
@@ -677,3 +828,6 @@
         </div>
         <div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
         <!-- /Vertical Nav -->
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">

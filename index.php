@@ -1,7 +1,6 @@
 <?php include("header.php") ?>
 
-<!-- Main Content -->
-<div class="hk-pg-wrapper">
+
 	<div class="container-xxl">
 
 		<!-- Page Body -->
@@ -46,12 +45,12 @@
 								<div class="card-action-wrap">
 									<div class="btn-group d-lg-flex d-none" role="group"
 										aria-label="Basic outlined example" id="dailyAppFilters">
-										<!-- <button type="button" class="btn btn-outline-light active"
-											data-daily-range="week">Weekly</button> -->
-										<button type="button" class="btn btn-outline-light"
+										<button type="button" class="btn btn-outline-light "
+											data-daily-range="week">Weekly</button>
+										<button type="button" class="btn btn-outline-light active"
 											data-daily-range="month">Monthly</button>
-										<!-- <button type="button" class="btn btn-outline-light"
-											data-daily-range="year">Yearly</button> -->
+										<button type="button" class="btn btn-outline-light"
+											data-daily-range="year">Yearly</button>
 									</div>
 								</div>
 
@@ -391,196 +390,177 @@
 										<thead>
 											<tr>
 
+												<th>Customer Id</th>
+												<th>Business Name</th>
 												<th>Name</th>
 												<th>Email Address</th>
 												<th>Phone</th>
-												<th>Onboard Date Time</th>
 												<th>Status</th>
+												<th>Onboard Date Time</th>
 												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-
+												<td>
+                                                    <a href="customer-view.php" class="customerID">VASAP202500001</a>
+                                                </td>
+												 <td>Cieco Securities Pvt. Ltd.</td>
 												<td>
 													<div class="media align-items-center">
 														<div class="media-head me-2">
 															<div class="avatar avatar-xs avatar-rounded">
-																<img src="dist/img/avatar1.jpg" alt="user"
-																	class="avatar-img">
+																<img src="dist/img/newimages/indian-users/user-in1.png" alt="user" class="avatar-img">
 															</div>
 														</div>
 														<div class="media-body">
-															<span class="d-block text-high-em">Morgan Freeman</span>
+															<span class="d-block text-high-em">Amit Sharma</span>
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">morgan@ASAP.com</td>
-												<td>+145 52 5689</td>
-												<td><span class="badge badge-soft-success  my-1  me-2">New
-														Customer</span></td>
-
-												<td>2025-07-09 06:30 PM</td>
+												<td class="text-truncate">amit.sharma@VASAP.in</td>
+												<td>98765 43210</td>
+												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td>20/07/2025 10:15 AM</td>
 												<td>
 													<div class="d-flex align-items-center">
-														<div class="d-flex">
-															<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-																data-bs-toggle="tooltip" data-placement="top" title=""
-																data-bs-original-title="View Customer Details"
-																href="#"><span class="icon"><span class="feather-icon">
-																		<iconify-icon icon="proicons:eye">
-																		</iconify-icon>
-																	</span></span></a>
-														</div>
-
+														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+															data-bs-toggle="tooltip" title="View Customer Details"
+															href="customer-view.php">
+															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+														</a>
 													</div>
 												</td>
 											</tr>
-											<tr>
 
+											<tr>
+												<td>
+                                                    <a href="customer-view.php" class="customerID">VASAP202500002</a>
+                                                </td>
+												 <td>Nova Capital Advisors Pvt. Ltd.</td>
 												<td>
 													<div class="media align-items-center">
 														<div class="media-head me-2">
 															<div class="avatar avatar-xs avatar-rounded">
-																<img src="dist/img/avatar9.jpg" alt="user"
-																	class="avatar-img">
+																<img src="dist/img/newimages/indian-users/user-in2.png" alt="user" class="avatar-img">
 															</div>
 														</div>
 														<div class="media-body">
-															<span class="d-block text-high-em">Huma Therman</span>
+															<span class="d-block text-high-em">Vijay Desai</span>
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">huma@clariesup.au</td>
-												<td>+234 48 2365</td>
-												<td><span class="badge badge-soft-success  my-1  me-2">New
-														Customer</span></td>
-
-												<td>2025-07-09 06:30 PM</td>
+												<td class="text-truncate">vijay.desai@clariesup.in</td>
+												<td>98230 11456</td>
+												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td>20/07/2025 11:25 AM</td>
 												<td>
 													<div class="d-flex align-items-center">
-														<div class="d-flex">
-															<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-																data-bs-toggle="tooltip" data-placement="top" title=""
-																data-bs-original-title="View Customer Details"
-																href="#"><span class="icon"><span class="feather-icon">
-																		<iconify-icon icon="proicons:eye">
-																		</iconify-icon>
-																	</span></span></a>
-														</div>
-
+														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+															data-bs-toggle="tooltip" title="View Customer Details"
+															href="customer-view.php">
+															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+														</a>
 													</div>
 												</td>
 											</tr>
-											<tr>
 
+											<tr>
+												<td>
+                                                    <a href="customer-view.php" class="customerID">VASAP202500003</a>
+                                                </td>
+												 <td>Vertex Finvest Solutions Ltd.</td>
 												<td>
 													<div class="media align-items-center">
 														<div class="media-head me-2">
-															<div
-																class="avatar avatar-xs avatar-soft-info avatar-rounded">
-																<span class="initial-wrap">C</span>
+															<div class="avatar avatar-xs avatar-soft-info avatar-rounded">
+																<!-- <span class="initial-wrap">R</span> -->
+																 <img src="dist/img/newimages/indian-users/user-in3.png" alt="user" class="avatar-img">
 															</div>
 														</div>
 														<div class="media-body">
-															<span class="d-block text-high-em">Charlie Chaplin</span>
+															<span class="d-block text-high-em">Rahul Mehta</span>
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">charlie@leernoca.monster</td>
-												<td>+741 56 7896</td>
-												<td><span class="badge badge-soft-success  my-1  me-2">New
-														Customer</span></td>
-
-												<td>2025-07-09 06:30 PM</td>
+												<td class="text-truncate">rahul.mehta@leernoca.in</td>
+												<td>99001 77665</td>
+												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td>19/07/2025 04:45 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
-														<div class="d-flex">
-															<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-																data-bs-toggle="tooltip" data-placement="top" title=""
-																data-bs-original-title="View Customer Details"
-																href="#"><span class="icon"><span class="feather-icon">
-																		<iconify-icon icon="proicons:eye">
-																		</iconify-icon>
-																	</span></span></a>
-														</div>
-
+														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+															data-bs-toggle="tooltip" title="View Customer Details"
+															href="customer-view.php">
+															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+														</a>
 													</div>
 												</td>
 											</tr>
-											<tr>
 
+											<tr>
+												<td>
+                                                    <a href="customer-view.php" class="customerID">VASAP202500004</a>
+                                                </td>
+												 <td>TruWealth Securities Pvt. Ltd.</td>
 												<td>
 													<div class="media align-items-center">
 														<div class="media-head me-2">
 															<div class="avatar avatar-xs avatar-rounded">
-																<img src="dist/img/avatar10.jpg" alt="user"
-																	class="avatar-img">
+																<img src="dist/img/newimages/indian-users/user-in4.png" alt="user" class="avatar-img">
 															</div>
 														</div>
 														<div class="media-body">
-															<span class="d-block text-high-em">Winston Churchil</span>
+															<span class="d-block text-high-em">Kunal Iyer</span>
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">winston@worthniza.ga</td>
-												<td>+145 52 5463</td>
-												<td><span class="badge badge-soft-success  my-1  me-2">New
-														Customer</span></td>
-
-												<td>2025-07-10 10:02 AM</td>
+												<td class="text-truncate">kunal.iyer@worthniza.in</td>
+												<td>99123 55667</td>
+												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td>18/07/2025 03:10 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
-														<div class="d-flex">
-															<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-																data-bs-toggle="tooltip" data-placement="top" title=""
-																data-bs-original-title="View Customer Details"
-																href="#"><span class="icon"><span class="feather-icon">
-																		<iconify-icon icon="proicons:eye">
-																		</iconify-icon>
-																	</span></span></a>
-														</div>
-
+														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+															data-bs-toggle="tooltip" title="View Customer Details"
+															href="customer-view.php">
+															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+														</a>
 													</div>
 												</td>
 											</tr>
-											<tr>
 
+											<tr>
+												<td>
+                                                    <a href="customer-view.php" class="customerID">VASAP202500005</a>
+                                                </td>
+												<td>BlueOak Investments Pvt. Ltd.</td>
 												<td>
 													<div class="media align-items-center">
 														<div class="media-head me-2">
 															<div class="avatar avatar-xs avatar-rounded">
-																<img src="dist/img/avatar3.jpg" alt="user"
-																	class="avatar-img">
+																<img src="dist/img/newimages/indian-users/user-in5.png" alt="user" class="avatar-img">
 															</div>
 														</div>
 														<div class="media-body">
-															<span class="d-block text-high-em">Jaquiline Joker</span>
+															<span class="d-block text-high-em">Deepak Nair</span>
 														</div>
 													</div>
 												</td>
-												<td class="text-truncate">jaquljoker@ASAP.com</td>
-												<td>+145 53 4715</td>
-												<td><span class="badge badge-soft-success  my-1  me-2">New
-														Customer</span></td>
-
-												<td>2025-07-10 11:45 AM</td>
+												<td class="text-truncate">deepak.nair@VASAP.in</td>
+												<td>99872 33441</td>
+												<td><span class="badge badge-soft-success my-1 me-2">New Customer</span></td>
+												<td>18/07/2025 12:30 PM</td>
 												<td>
 													<div class="d-flex align-items-center">
-														<div class="d-flex">
-															<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
-																data-bs-toggle="tooltip" data-placement="top" title=""
-																data-bs-original-title="View Customer Details"
-																href="#"><span class="icon"><span class="feather-icon">
-																		<iconify-icon icon="proicons:eye">
-																		</iconify-icon>
-																	</span></span></a>
-														</div>
-
+														<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+															data-bs-toggle="tooltip" title="View Customer Details"
+															href="customer-view.php">
+															<span class="icon"><iconify-icon icon="proicons:eye"></iconify-icon></span>
+														</a>
 													</div>
 												</td>
 											</tr>
-
 										</tbody>
 									</table>
 								</div>
@@ -593,20 +573,7 @@
 		<!-- /Page Body -->
 	</div>
 
-	<!-- Page Footer -->
-	<div class="hk-footer">
-		<footer class="container-xxl footer">
-			<div class="row">
-				<div class="col-xl-12">
-					<p class="footer-text"><span class="copy-text">ASAP © 2025 All rights reserved.</span></p>
-				</div>
-				
-			</div>
-		</footer>
-	</div>
-	<!-- / Page Footer -->
 
-</div>
 <!-- /Main Content -->
 
 <?php include("footer.php") ?>

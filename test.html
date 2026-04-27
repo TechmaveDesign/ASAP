@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Consent Workflow Integration</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Custom Workflow CSS -->
+    <link rel="stylesheet" href="src/approval-workflow.css">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .FileStatus {
+            margin: 20px 0;
+        }
+
+        .StatusBox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+
+        .badge-soft-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-soft-success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .demo-controls {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f3f4f6;
+            border-radius: 8px;
+        }
+
+        .demo-controls h5 {
+            margin-bottom: 15px;
+            color: #374151;
+        }
+
+        .btn-demo {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .info-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box h6 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        .info-box li {
+            margin-bottom: 5px;
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h2 class="mb-4">Customer Consent Approval Workflow Demo</h2>
+
+        <div class="info-box">
+            <h6>How it works:</h6>
+            <ul>
+                <li>When status is "Waiting For Approval" → All buttons are disabled</li>
+                <li>When status changes to "Approved" → "Loan Agreement" button becomes enabled</li>
+                <li>Click enabled button → Shows confirmation modal</li>
+                <li>On confirm → Button changes to "In Progress" with orange color</li>
+                <li>After API simulation (2 seconds) → Button changes to "Completed" with green color</li>
+                <li>Next button in sequence becomes enabled automatically</li>
+            </ul>
+        </div>
+
+        <div class="demo-controls">
+            <h5>Demo Controls (Simulate Status Changes):</h5>
+            <button class="btn btn-warning btn-demo" onclick="setStatusWaiting()">
+                Set Status: Waiting For Approval
+            </button>
+            <button class="btn btn-success btn-demo" onclick="setStatusApproved()">
+                Set Status: Approved
+            </button>
+            <button class="btn btn-secondary btn-demo" onclick="resetWorkflow()">
+                Reset All Buttons
+            </button>
+        </div>
+
+        <div class="FileStatus">
+            <div class="StatusBox">
+                <span id="customerStatusBadge" class="badge badge-soft-warning">
+                    Waiting For Approval
+                </span>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h5>Integration Instructions:</h5>
+            <div class="alert alert-info">
+                <h6>To integrate into your PHP file:</h6>
+                <ol>
+                    <li>Add these lines in the <code>&lt;head&gt;</code> section of your PHP file (before closing <code>&lt;/head&gt;</code>):
+                        <pre class="mt-2 p-2 bg-light"><code>&lt;link rel="stylesheet" href="path/to/approval-workflow.css"&gt;</code></pre>
+                    </li>
+                    <li>Add this line before the closing <code>&lt;/body&gt;</code> tag:
+                        <pre class="mt-2 p-2 bg-light"><code>&lt;script src="path/to/approval-workflow.js"&gt;&lt;/script&gt;</code></pre>
+                    </li>
+                    <li>The workflow buttons will be automatically inserted after the <code>.StatusBox</code> element</li>
+                    <li>When your assessment form is submitted and status changes to "Approved", the first button will automatically enable</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h5>API Integration:</h5>
+            <div class="alert alert-warning">
+                <p>To connect with your actual API, modify the <code>simulateAPICall</code> method in <code>approval-workflow.js</code>:</p>
+                <pre class="mt-2 p-2 bg-light"><code>simulateAPICall(button, step) {
+  // Replace this with your actual API call
+  fetch('/api/update-approval-step', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ step: step, customer_id: 'VASAP202500001' })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      this.completeProcess(button, step);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Handle error
+  });
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Approval Workflow Script -->
+    <script src="src/approval-workflow.js"></script>
+
+    <script>
+        function setStatusWaiting() {
+            const badge = document.getElementById('customerStatusBadge');
+            badge.textContent = 'Waiting For Approval';
+            badge.className = 'badge badge-soft-warning';
+
+            document.querySelectorAll('.workflow-btn').forEach(btn => {
+                btn.disabled = true;
+                btn.classList.remove('enabled', 'in-progress', 'completed');
+                const stepName = btn.getAttribute('data-step');
+                btn.querySelector('.btn-text').textContent =
+                    window.approvalWorkflow.getStepName(stepName);
+            });
+        }
+
+        function setStatusApproved() {
+            const badge = document.getElementById('customerStatusBadge');
+            badge.textContent = 'Approved';
+            badge.className = 'badge badge-soft-success';
+
+            if (window.approvalWorkflow) {
+                window.approvalWorkflow.updateButtonStates();
+            }
+        }
+
+        function resetWorkflow() {
+            setStatusWaiting();
+
+            Swal.fire({
+                title: 'Workflow Reset',
+                text: 'All buttons have been reset to initial state',
+                icon: 'info',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+    </script>
+</body>
+</html>
