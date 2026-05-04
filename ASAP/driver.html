@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Driver Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+
+/* ============================= */
+/* BLOCK SCOPE CSS (driver-search) */
+/* ============================= */
+
+.driver-search-wrapper{
+    position:relative;
+  
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Input */
+.driver-search-input{
+    width:100%;
+    padding:12px 40px 12px 14px;
+    border-radius:10px;
+    border:1px solid #dcdcdc;
+    font-size:15px;
+    outline:none;
+    transition:.2s;
+}
+
+.driver-search-input:focus{
+    border-color:#4caf50;
+    box-shadow:0 0 0 3px rgba(76,175,80,.15);
+}
+
+/* Clear */
+.driver-search-clear{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:18px;
+    color:#999;
+    display:none;
+}
+
+/* Dropdown */
+.driver-search-dropdown{
+    position:absolute;
+    top:110%;
+    width:100%;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    display:none;
+    z-index:1000;
+}
+
+/* Item */
+.driver-search-item{
+    padding:12px 14px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #f1f1f1;
+    transition:.2s;
+}
+
+.driver-search-item:last-child{
+    border-bottom:none;
+}
+
+.driver-search-item:hover{
+    background:#f5f8ff;
+}
+
+/* Disabled Item */
+.driver-search-item.disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    background:#fafafa !important;
+}
+
+/* Info */
+.driver-search-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.driver-search-name{
+    font-weight:600;
+    font-size:14px;
+}
+
+.driver-search-email{
+    font-size:12px;
+    color:#777;
+}
+
+/* Status */
+.driver-search-status{
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+}
+
+.driver-search-connected{
+    background:#e7f9ee;
+    color:#2e9c5f;
+}
+
+.driver-search-notconnected{
+    background:#fdeaea;
+    color:#e53935;
+}
+
+/* No result */
+.driver-search-noresult{
+    padding:14px;
+    text-align:center;
+    font-size:13px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body style="background:#f4f7fb;padding:40px;">
+
+<div class="driver-search-wrapper">
+
+    <input type="text"
+           class="driver-search-input"
+           placeholder="Search Driver..."
+           id="driverInput">
+
+    <span class="driver-search-clear" id="driverClear">✕</span>
+
+    <div class="driver-search-dropdown" id="driverDropdown"></div>
+
+</div>
+
+<script>
+
+// Driver Data
+const driverList = [
+    {name:"Rahul Sharma", email:"rahul@gmail.com", status:"connected"},
+    {name:"Amit Verma", email:"amit@gmail.com", status:"not-connected"},
+    {name:"Pankaj Singh", email:"pankaj@gmail.com", status:"connected"},
+    {name:"Neha Gupta", email:"neha@gmail.com", status:"not-connected"},
+    {name:"Rohit Kumar", email:"rohit@gmail.com", status:"connected"}
+];
+
+const input = document.getElementById("driverInput");
+const dropdown = document.getElementById("driverDropdown");
+const clearBtn = document.getElementById("driverClear");
+
+let selected = false;
+let noMatch = false;
+
+// Input Event
+input.addEventListener("input", ()=>{
+
+    const value = input.value.toLowerCase();
+    dropdown.innerHTML = "";
+    selected = false;
+    noMatch = false;
+
+    if(value === ""){
+        dropdown.style.display="none";
+        clearBtn.style.display="none";
+        return;
+    }
+
+    clearBtn.style.display="block";
+
+    const filtered = driverList.filter(d =>
+        d.name.toLowerCase().includes(value) ||
+        d.email.toLowerCase().includes(value)
+    );
+
+    // If no match — don't show dropdown
+    if(filtered.length === 0){
+        dropdown.style.display="none";
+        noMatch = true;
+        return;
+    }
+
+    filtered.forEach(driver => {
+
+        const item = document.createElement("div");
+        item.className = "driver-search-item";
+
+        if(driver.status === "connected"){
+            item.classList.add("disabled");
+        }
+
+        item.innerHTML = `
+            <div class="driver-search-info">
+                <span class="driver-search-name">${driver.name}</span>
+                <span class="driver-search-email">${driver.email}</span>
+            </div>
+            <span class="driver-search-status 
+                ${driver.status === "connected" ? "driver-search-connected" : "driver-search-notconnected"}">
+                ${driver.status === "connected" ? "Already Connected" : "Not Connected"}
+            </span>
+        `;
+
+        item.onclick = ()=>{
+
+            // Already Connected
+            if(driver.status === "connected"){
+
+                Swal.fire({
+                    icon:'warning',
+                    title:'Driver Already Assigned',
+                    text:'This driver is already working under you',
+                    confirmButtonColor:'#4caf50'
+                });
+
+                return;
+            }
+
+            input.value = driver.name;
+            dropdown.style.display="none";
+            selected = true;
+        };
+
+        dropdown.appendChild(item);
+    });
+
+    dropdown.style.display="block";
+
+});
+
+// ENTER KEY BEHAVIOR
+input.addEventListener("keydown", (e)=>{
+
+    if(e.key === "Enter"){
+
+        // If no suggestion exists — allow free submit
+        if(noMatch){
+            dropdown.style.display="none";
+            return;
+        }
+
+        // If suggestions exist but not selected — block
+        if(!selected && dropdown.style.display === "block"){
+
+            e.preventDefault();
+
+            Swal.fire({
+                icon:'info',
+                title:'Selection Required',
+                text:'Please select driver from suggestions',
+                confirmButtonColor:'#4caf50'
+            });
+
+        }
+
+    }
+
+});
+
+// Clear
+clearBtn.addEventListener("click", ()=>{
+    input.value="";
+    dropdown.style.display="none";
+    clearBtn.style.display="none";
+});
+
+// Blur Validation
+input.addEventListener("blur", ()=>{
+
+    setTimeout(()=>{
+
+        if(noMatch) return;
+
+        const value = input.value.toLowerCase();
+
+        const matched = driverList.some(d =>
+            d.name.toLowerCase() === value ||
+            d.email.toLowerCase() === value
+        );
+
+        if(matched && !selected){
+
+            Swal.fire({
+                icon:'info',
+                title:'Selection Required',
+                text:'Please select driver from suggestions',
+                confirmButtonColor:'#4caf50'
+            });
+
+            input.value="";
+        }
+
+    },200);
+
+});
+
+</script>
+
+
+</body>
+</html>

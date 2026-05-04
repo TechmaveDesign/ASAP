@@ -1,0 +1,12 @@
+[
+  {
+    "component": "Dashboard",
+    "category": "Home",
+    "link": "index.html"
+  },
+  {
+    "component": "Loans",
+    "category": "Finance",
+    "link": "loans.html"
+  }
+]
